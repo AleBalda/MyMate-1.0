@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MyMate Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+<div class="relative min-h-screen flex">
+<aside class="w-64 bg-white p-6 border-r border-gray-200 flex flex-col justify-between">
+<div>
+<h1 class="text-2xl font-bold text-gray-800">MyMate</h1>
+<nav class="mt-8">
+<h2 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Subjects</h2>
+<ul class="mt-4 space-y-2">
+<li>
+<a class="flex items-center p-2 text-white bg-blue-500 rounded-lg" href="#">
+<span class="w-2 h-2 bg-white rounded-full mr-3"></span>
+                                Analisi Matematica I
+                            </a>
+</li>
+<li>
+<a class="flex items-center p-2 text-gray-700 hover:bg-gray-100 rounded-lg" href="#">
+<span class="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
+                                Diritto Privato
+                            </a>
+</li>
+<li>
+<a class="flex items-center p-2 text-gray-700 hover:bg-gray-100 rounded-lg" href="#">
+<span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                                Diritto Commerciale
+                            </a>
+</li>
+<li>
+<a class="flex items-center p-2 text-gray-700 hover:bg-gray-100 rounded-lg" href="#">
+<span class="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
+                                Statistica I
+                            </a>
+</li>
+<li>
+<a class="flex items-center p-2 text-gray-700 hover:bg-gray-100 rounded-lg" href="#">
+<span class="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
+                                Fisica Generale
+                            </a>
+</li>
+<li>
+<a class="flex items-center p-2 text-gray-700 hover:bg-gray-100 rounded-lg" href="#">
+<span class="w-2 h-2 bg-yellow-500 rounded-full mr-3"></span>
+                                Chimica Inorganica
+                            </a>
+</li>
+<li>
+<a class="flex items-center p-2 text-gray-700 hover:bg-gray-100 rounded-lg" href="#">
+<span class="w-2 h-2 bg-blue-300 rounded-full mr-3"></span>
+                                Economia Politica
+                            </a>
+</li>
+</ul>
+</nav>
+</div>
+<div class="flex items-center p-2 hover:bg-gray-100 rounded-lg cursor-pointer">
+<img alt="Mario Rossi avatar" class="w-10 h-10 rounded-full mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAddU4wDnMVLDrpc3IDGaVkbmEj-4zZtokvgvF1dgOuNJO3SDRDyVn0AGTghB8kdFooIGGgqglWoXaMEXyaZNgnd7HHWc4MHuWPV59LD5wdlMACAbH2f2mk_6OSLEvzFxLDBk3lzNO2JaqqCqxGk56rWp_WycvzpqAFJCj6EdHuVwp9lUMsD3vbUNTkhvYTnzQfZ2KDOFlmKma8w3haxBRAH98dFh3MxwVShqQAnfgCUGY2LtZATUp32-KVWAFsgCk2rNfBFUenUg"/>
+<span class="font-medium text-gray-800">Mario Rossi</span>
+<span class="material-icons ml-auto text-gray-500">settings</span>
+</div>
+</aside>
+<main class="flex-1 p-10 flex justify-center items-start">
+<div class="max-w-4xl w-full flex flex-col items-center">
+<div class="w-full flex justify-center">
+<img alt="AI assistant avatar" class="w-48 h-48 rounded-lg object-cover shadow-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb8ajzhyza-h1c4tko1ECGv_Wuc2yKVXEKLk43TwPROipBvi0SiCccSfUsGYmSWMIqykiS48QoRDOkRlJdwVcuHNiZ4CJRM8EV_BnkdD0aY2V3jTjS1Y2di_AqAp7Ts8ZVWacuX_69n6ZRr1lasQ3WNUL5TgZUDJk9_mP4vk_7OzUtcKhLixBvwR79WHHQ9qNrr-tq4VQhvthOgAwKRFMSWJNijd47m-ombFV7vf08JvOYTtoxHfrQae7l68hUbm3qPFqF6xJu4Hc"/>
+</div>
+<h2 class="text-3xl font-semibold text-gray-800 mt-6">Ciao Mario, pronto a spaccare oggi?</h2>
+<div class="relative w-full max-w-2xl mt-8">
+<input class="w-full p-4 pr-20 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Chiedimi qualsiasi cosa..." type="text"/>
+<div class="absolute inset-y-0 right-0 flex items-center pr-4 space-x-2">
+<button class="text-gray-500 hover:text-blue-500">
+<span class="material-icons">mic</span>
+</button>
+<button class="text-gray-500 hover:text-blue-500">
+<span class="material-icons">attach_file</span>
+</button>
+</div>
+</div>
+<div class="w-full max-w-2xl bg-yellow-100 border border-yellow-200 rounded-lg p-4 mt-6 flex items-center justify-between">
+<div class="flex items-center">
+<div class="bg-red-500 p-2 rounded-lg">
+<span class="material-icons text-white">alarm</span>
+</div>
+<div class="ml-4">
+<p class="font-bold text-gray-800">Today's Focus</p>
+<p class="text-gray-600">Deadline approaching: Analisi I</p>
+</div>
+</div>
+<button class="bg-blue-500 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-600 transition-colors">Start Studying</button>
+</div>
+</div>
+</main>
+<aside class="w-80 bg-gray-50 p-6 space-y-8">
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="font-bold text-lg text-gray-800 mb-4">Academic Calendar</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="text-center mr-4">
+<p class="text-xs text-gray-500">MAY</p>
+<p class="font-bold text-xl text-gray-800">31</p>
+</div>
+<div>
+<p class="font-semibold text-gray-800">10:00 - Exam: Analisi I</p>
+<p class="text-sm text-gray-500">Aula 1, Building A</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="text-center mr-4">
+<p class="text-xs text-gray-500">JUN</p>
+<p class="font-bold text-xl text-gray-800">1</p>
+</div>
+<div>
+<p class="font-semibold text-gray-800">Submit: Essay</p>
+<p class="text-sm text-gray-500">Diritto Privato</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="text-center mr-4">
+<p class="text-xs text-gray-500">JUN</p>
+<p class="font-bold text-xl text-gray-800">3</p>
+</div>
+<div>
+<p class="font-semibold text-gray-800">Group Meeting</p>
+<p class="text-sm text-gray-500">Project Statistica I</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="font-bold text-lg text-gray-800 mb-4">Your Progress</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<div class="flex items-center">
+<span class="text-2xl mr-2">🔥</span>
+<p class="text-gray-700">Daily Streak</p>
+</div>
+<p class="font-bold text-gray-800">5 Days</p>
+</div>
+<div class="flex justify-between items-center cursor-pointer">
+<div class="flex items-center">
+<span class="text-2xl mr-2">💎</span>
+<p class="text-gray-700">Virtual Currency</p>
+</div>
+<p class="font-bold text-gray-800">1,250</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm">
+<h3 class="font-bold text-lg text-gray-800 mb-4">Today's Goals</h3>
+<div class="space-y-3">
+<div class="flex items-center">
+<span class="material-icons text-green-500 mr-3">check_circle</span>
+<p class="text-gray-700">Log in to MyMate</p>
+</div>
+<div class="flex items-center">
+<span class="material-icons text-green-500 mr-3">check_circle</span>
+<p class="text-gray-700">Complete one study session</p>
+</div>
+<div class="flex items-center">
+<span class="material-icons text-gray-400 mr-3">radio_button_unchecked</span>
+<p class="text-gray-700">Upload new notes for a subject</p>
+</div>
+</div>
+</div>
+</aside>
+<div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+<div class="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-2xl mx-4 transform transition-all">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-2xl font-bold text-gray-800">Your Wallet</h2>
+<button class="text-gray-400 hover:text-gray-600">
+<span class="material-icons">close</span>
+</button>
+</div>
+<div class="text-center py-8 bg-gray-50 rounded-xl mb-8">
+<div class="flex items-center justify-center">
+<span class="text-6xl">💎</span>
+<p class="text-7xl font-bold text-gray-800 ml-4">1,250</p>
+</div>
+<p class="text-gray-600 mt-4">Use your gems to power up your study sessions!</p>
+</div>
+<div class="mb-8">
+<h3 class="font-bold text-lg text-gray-800 mb-4">Recent Activity</h3>
+<div class="space-y-3 max-h-32 overflow-y-auto pr-2">
+<div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
+<div class="flex items-center">
+<span class="material-icons text-green-500 mr-3">add_circle</span>
+<p class="text-gray-700">Daily goal completed</p>
+</div>
+<p class="font-semibold text-green-600">+10 💎</p>
+</div>
+<div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
+<div class="flex items-center">
+<span class="material-icons text-red-500 mr-3">remove_circle</span>
+<p class="text-gray-700">Unlocked extra quiz</p>
+</div>
+<p class="font-semibold text-red-600">-50 💎</p>
+</div>
+<div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg">
+<div class="flex items-center">
+<span class="material-icons text-green-500 mr-3">add_circle</span>
+<p class="text-gray-700">Weekly goal achieved</p>
+</div>
+<p class="font-semibold text-green-600">+100 💎</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-bold text-lg text-gray-800 mb-4">Spend Your Gems</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="border border-gray-200 rounded-lg p-4 flex flex-col items-center text-center">
+<span class="material-icons text-4xl text-blue-500 mb-2">school</span>
+<p class="font-semibold text-gray-800 mb-1">Extra Quiz</p>
+<p class="text-sm text-gray-500 mb-3">Cost: 50 💎</p>
+<button class="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition-colors">Unlock</button>
+</div>
+<div class="border border-gray-200 rounded-lg p-4 flex flex-col items-center text-center">
+<span class="material-icons text-4xl text-blue-500 mb-2">smart_toy</span>
+<p class="font-semibold text-gray-800 mb-1">Avatar Time Boost</p>
+<p class="text-sm text-gray-500 mb-3">Cost: 75 💎</p>
+<button class="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition-colors">Unlock</button>
+</div>
+<div class="border border-gray-200 rounded-lg p-4 flex flex-col items-center text-center">
+<span class="material-icons text-4xl text-blue-500 mb-2">auto_awesome</span>
+<p class="font-semibold text-gray-800 mb-1">Custom Theme</p>
+<p class="text-sm text-gray-500 mb-3">Cost: 200 💎</p>
+<button class="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition-colors">Unlock</button>
+</div>
+<div class="border border-gray-200 rounded-lg p-4 flex flex-col items-center text-center">
+<span class="material-icons text-4xl text-blue-500 mb-2">hourglass_top</span>
+<p class="font-semibold text-gray-800 mb-1">Extra Pomodoro</p>
+<p class="text-sm text-gray-500 mb-3">Cost: 25 💎</p>
+<button class="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition-colors">Unlock</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

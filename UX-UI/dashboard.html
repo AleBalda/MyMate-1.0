@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MyMate - AI Study Companion</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+<div class="flex h-screen">
+<aside class="w-[20%] bg-gray-50 flex flex-col fixed h-full border-r border-gray-200">
+<div class="p-6">
+<h1 class="text-2xl font-bold text-blue-600">MyMate</h1>
+</div>
+<div class="px-4 flex-1 overflow-y-auto">
+<h2 class="px-2 text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Subjects</h2>
+<nav class="space-y-1 mb-6">
+<a class="flex items-center px-3 py-2 text-white bg-blue-600 rounded-lg" href="#">
+<span class="w-3 h-3 rounded-full bg-blue-300 mr-3"></span>
+<span class="text-sm font-medium">Analisi Matematica I</span>
+</a>
+<a class="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-200 rounded-lg" href="#">
+<span class="w-3 h-3 rounded-full bg-purple-400 mr-3"></span>
+<span class="text-sm font-medium">Diritto Privato</span>
+</a>
+<a class="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-200 rounded-lg" href="#">
+<span class="w-3 h-3 rounded-full bg-orange-400 mr-3"></span>
+<span class="text-sm font-medium">Diritto Commerciale</span>
+</a>
+<a class="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-200 rounded-lg" href="#">
+<span class="w-3 h-3 rounded-full bg-green-400 mr-3"></span>
+<span class="text-sm font-medium">Statistica I</span>
+</a>
+<a class="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-200 rounded-lg" href="#">
+<span class="w-3 h-3 rounded-full bg-red-400 mr-3"></span>
+<span class="text-sm font-medium">Fisica Generale</span>
+</a>
+<a class="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-200 rounded-lg" href="#">
+<span class="w-3 h-3 rounded-full bg-yellow-400 mr-3"></span>
+<span class="text-sm font-medium">Chimica Inorganica</span>
+</a>
+<a class="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-200 rounded-lg" href="#">
+<span class="w-3 h-3 rounded-full bg-indigo-400 mr-3"></span>
+<span class="text-sm font-medium">Economia Politica</span>
+</a>
+</nav>
+</div>
+<div class="p-4 border-t border-gray-200">
+<div class="flex items-center">
+<img alt="User avatar" class="w-10 h-10 rounded-full mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwRuRhhA-Siyor5hYGDpwarJ-ItDnxMb5Kt3c7J0jzswKOZh-4IgUL6d-0ETQEjIk5kowIcLy7huWRel2u_V9ig_iWWLtl9qgZbIAfbcs4tdxpVdftNJ5ZGjWMrCpx9Rpkoqb-RG7Mz3hx4oWSqju0PSzH1_JKBl9Cl9W6A5rxOvqO9O1NK8OZPigURdIy8iyp8TEiRbZ7LWBB7B0dLhmPN_p5m23YSdL-tSZjv5gAqJVo4P5-sFR-d3B2dRkCqOHmeEUpTjTtfq0"/>
+<div>
+<p class="font-semibold text-sm">Mario Rossi</p>
+</div>
+<button class="ml-auto text-gray-500 hover:text-gray-700">
+<span class="material-icons-outlined">settings</span>
+</button>
+</div>
+</div>
+</aside>
+<div class="flex-1 ml-[20%] flex">
+<main class="w-[62.5%] bg-white p-8 flex flex-col">
+<div class="flex-1 flex flex-col items-center justify-center text-center">
+<img alt="MyMate AI Avatar" class="w-64 h-64 mb-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa4QtLtAILBenHR2XYdSuNTqkEmFQzGuovD3vvpjuW7v4vxg8CeeNfrFrk9jLobKrFiooBs2VG2EVxQ81br2phqlSAk1_AQUwsTWs25P2pBzUVKoRuYTgOec0OzgBAi6MwNBsE6pRpNogrwXGyEZ3f3RYQyufjhi4YRdYXz16W8MfXM9G_gzrGUT6JwjQh7dEWLgwYjYjiGufc9yzM60U_pdDtMCoMPQqeiNWVxmzOm0tYKq-QgrlqEfG55omiJUgxNqxmGJugNuA" style="filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));"/>
+<h2 class="text-3xl font-bold text-gray-800 mb-4">Ciao Mario, pronto a spaccare oggi?</h2>
+<div class="w-full max-w-2xl bg-gray-100 rounded-full flex items-center p-2 shadow-sm mb-6">
+<input class="flex-1 bg-transparent px-4 py-2 focus:outline-none text-gray-700 placeholder-gray-500" placeholder="Chiedimi qualsiasi cosa..." type="text"/>
+<button class="p-2 text-gray-500 hover:text-blue-600 rounded-full">
+<span class="material-icons-outlined">mic</span>
+</button>
+<button class="p-2 text-gray-500 hover:text-blue-600 rounded-full">
+<span class="material-icons-outlined">attach_file</span>
+</button>
+</div>
+<div class="w-full max-w-2xl bg-yellow-50 border border-yellow-200 rounded-2xl p-6 flex items-center justify-between shadow-sm">
+<div class="flex items-center">
+<span class="text-4xl mr-4">🚨</span>
+<div>
+<h3 class="font-bold text-gray-800 text-left">Today's Focus</h3>
+<p class="text-gray-600 text-left">Deadline approaching: Analisi I</p>
+</div>
+</div>
+<button class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">Start Studying</button>
+</div>
+</div>
+</main>
+<aside class="w-[37.5%] bg-gray-100 p-6 flex flex-col gap-6">
+<div class="bg-white rounded-2xl shadow-sm p-6 flex-grow flex flex-col">
+<h3 class="text-xl font-semibold mb-4">Academic Calendar</h3>
+<div class="flex-grow space-y-4">
+<div class="flex items-start">
+<div class="text-center mr-4">
+<p class="font-bold text-gray-800">31</p>
+<p class="text-xs text-gray-500">MAY</p>
+</div>
+<div class="flex-1 border-l-2 border-red-500 pl-4">
+<p class="text-sm font-semibold text-gray-800">10:00 - Exam: Analisi I</p>
+<p class="text-sm text-gray-500">Aula 1, Building A</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="text-center mr-4">
+<p class="font-bold text-gray-800">1</p>
+<p class="text-xs text-gray-500">JUN</p>
+</div>
+<div class="flex-1 border-l-2 border-purple-500 pl-4">
+<p class="text-sm font-semibold text-gray-800">Submit: Essay</p>
+<p class="text-sm text-gray-500">Diritto Privato</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="text-center mr-4">
+<p class="font-bold text-gray-800">3</p>
+<p class="text-xs text-gray-500">JUN</p>
+</div>
+<div class="flex-1 border-l-2 border-blue-500 pl-4">
+<p class="text-sm font-semibold text-gray-800">Group Meeting</p>
+<p class="text-sm text-gray-500">Project Statistica I</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl shadow-sm p-6">
+<h3 class="text-xl font-semibold mb-4">Your Progress</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<span class="text-2xl mr-2">🔥</span>
+<span class="font-medium text-gray-700">Daily Streak</span>
+</div>
+<span class="font-bold text-lg">5 Days</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<span class="text-2xl mr-2">💎</span>
+<span class="font-medium text-gray-700">Virtual Currency</span>
+</div>
+<span class="font-bold text-lg">1,250</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-2xl shadow-sm p-6">
+<h3 class="text-xl font-semibold mb-4">Today's Goals</h3>
+<ul class="space-y-3">
+<li class="flex items-center">
+<span class="material-icons-outlined text-green-500 mr-3">check_circle</span>
+<span class="text-gray-800 font-medium">Log in to MyMate</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 rounded-full border-2 border-green-500 mr-3"></div>
+<span class="text-gray-800 font-medium">Complete one study session</span>
+</li>
+<li class="flex items-center">
+<div class="w-5 h-5 rounded-full border-2 border-green-500 mr-3"></div>
+<span class="text-gray-800 font-medium">Upload new notes for a subject</span>
+</li>
+</ul>
+</div>
+</aside>
+</div>
+</div>
+
+</body></html>

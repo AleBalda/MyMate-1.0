@@ -1,0 +1,17 @@
+.container { width: 450px; text-align: center; }
+.title { font-size: 20px; font-weight: 600; margin-bottom: 24px; color: var(--text-dark); }
+.hero { display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+.flameIcon { font-size: 80px; color: #f59e0b; }
+.streakNumber { font-size: 96px; font-weight: 800; color: var(--text-dark); line-height: 1; margin-left: -10px; }
+.motivation { font-size: 16px; color: var(--text-light); margin-top: 0; margin-bottom: 16px; }
+.nextReward { background-color: var(--primary-blue-light); padding: 12px; border-radius: 8px; font-size: 14px; margin-bottom: 24px; line-height: 1.5; color: var(--text-dark); }
+.nextReward strong { color: var(--primary-blue); }
+.tabs { display: flex; border-bottom: 1px solid var(--border-color); margin-bottom: 16px; }
+.tab { border: none; background: none; padding: 8px 16px; font-size: 14px; font-weight: 500; cursor: pointer; color: var(--text-light); border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; }
+.tab:hover { color: var(--text-dark); }
+.tab.active { color: var(--primary-blue); border-bottom-color: var(--primary-blue); }
+.goalsList { text-align: left; }
+.goalItem { display: flex; align-items: center; margin-bottom: 12px; font-weight: 500; }
+.goalItem svg { margin-right: 12px; font-size: 20px; }
+.goalItem.completed { color: var(--text-light); text-decoration: line-through; }
+.goalItem.completed svg { color: var(--success-green); }

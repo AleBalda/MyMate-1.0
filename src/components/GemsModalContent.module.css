@@ -1,0 +1,22 @@
+.container { width: 500px; text-align: center; }
+.title { font-size: 20px; font-weight: 600; margin-bottom: 8px; color: var(--text-dark); }
+.hero { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.gemIcon { font-size: 60px; color: var(--primary-blue); }
+.gemNumber { font-size: 72px; font-weight: 800; color: var(--text-dark); line-height: 1; }
+.subtitle { font-size: 16px; color: var(--text-light); margin-top: 0; margin-bottom: 32px; }
+.section { margin-bottom: 24px; }
+.sectionTitle { font-size: 16px; font-weight: 600; text-align: left; margin-bottom: 12px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; color: var(--text-dark); }
+.activityList { list-style: none; padding: 0; margin: 0; text-align: left; }
+.activityList li { display: flex; align-items: center; padding: 8px 0; font-weight: 500; }
+.activityList svg { margin-right: 12px; font-size: 20px; }
+.activityList .plus { color: var(--success-green); }
+.activityList .minus { color: var(--error-red); }
+.activityList span { margin-left: auto; font-weight: 600; color: var(--text-light); }
+.storeGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.storeItem { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; border: 1px solid var(--border-color); border-radius: 12px; text-align: center; transition: box-shadow 0.2s, transform 0.2s; }
+.storeItem:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.storeItem svg { margin-bottom: 8px; color: var(--primary-blue); }
+.storeItem span { font-weight: 600; }
+.storeItem small { color: var(--text-light); margin: 4px 0 12px 0; }
+.storeItem button { width: 100%; padding: 10px; border: none; background-color: var(--primary-blue); color: var(--text-on-primary); border-radius: 8px; font-weight: 600; cursor: pointer; transition: background-color 0.2s; }
+.storeItem button:hover { background-color: #1d4ed8; }

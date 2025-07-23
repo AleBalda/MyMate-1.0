@@ -1,0 +1,253 @@
+/* src/pages/DashboardPage.module.css */
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 280px 1fr 380px; /* Colonne a larghezza fissa e flessibile */
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Impedisce lo scorrimento della pagina intera */
+  background-color: var(--background-secondary);
+}
+
+/* --- Colonna Sinistra --- */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-main);
+  border-right: 1px solid var(--border-color);
+  padding: 24px;
+  overflow-y: auto; /* Abilita lo scorrimento solo per questa colonna */
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 32px;
+}
+
+.subjectsHeader {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.subjectsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* Occupa lo spazio rimanente */
+}
+
+.subjectItem {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+  margin-bottom: 4px;
+  transition: background-color 0.2s;
+}
+
+.subjectItem:hover {
+  background-color: var(--background-secondary);
+}
+
+.subjectDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.userProfile img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.userProfile span {
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+.settingsIcon {
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+/* --- Colonna Centrale --- */
+.centerColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  overflow-y: auto;
+}
+
+.avatar {
+  width: 300px;
+  height: 330px;
+  border-radius: 10%;
+  margin-bottom: 24px;
+  object-fit:cover;
+}
+
+.welcomeMessage {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+}
+
+.commandBar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 8px 16px;
+  background-color: var(--background-main);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.commandBar input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.commandBar svg {
+  color: var(--text-light);
+  margin-left: 16px;
+}
+
+.focusCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: var(--warning-yellow-bg);
+  border: 1px solid var(--warning-yellow-border);
+}
+
+.focusContent {
+  display: flex;
+  align-items: center;
+}
+
+.focusContent svg {
+  color: var(--warning-yellow-icon);
+  margin-right: 16px;
+  font-size: 24px;
+}
+
+.focusText strong {
+  display: block;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.focusText span {
+  color: var(--text-light);
+}
+
+.focusCard button {
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--primary-blue);
+  color: var(--text-on-primary);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* --- Colonna Destra --- */
+.rightColumn {
+  padding: 24px;
+  background-color: var(--background-main);
+  border-left: 1px solid var(--border-color);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.widgetCard {
+  background-color: var(--background-main);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.widgetCard h3 {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* Stili specifici per i widget */
+.calendarEvent {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.calendarDate {
+  text-align: center;
+  margin-right: 16px;
+  min-width: 40px;
+}
+.calendarDate div:first-child { font-weight: 700; font-size: 18px; }
+.calendarDate div:last-child { font-size: 12px; color: var(--text-light); text-transform: uppercase; }
+.calendarLine { width: 2px; height: 30px; background-color: var(--primary-blue-light); margin-right: 16px; }
+.calendarDetails strong { display: block; }
+.calendarDetails span { color: var(--text-light); font-size: 14px; }
+
+
+.progressItem, .goalItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.progressItem svg, .goalItem svg {
+  margin-right: 12px;
+  color: var(--text-light);
+  font-size: 20px;
+}
+
+.progressItem .value {
+  margin-left: auto;
+  font-weight: 600;
+}
+
+.goalItem.completed {
+  color: var(--text-light);
+  text-decoration: line-through;
+}
+
+.goalItem.completed svg {
+  color: var(--success-green);
+}

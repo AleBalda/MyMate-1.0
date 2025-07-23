@@ -1,0 +1,176 @@
+/* src/components/Settings/Settings.module.css */
+
+/* --- Card Principale e Titoli --- */
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px 28px; /* Aumentato padding laterale */
+  margin-bottom: 32px; /* Aumentato spazio tra le card */
+}
+.card:last-child { 
+  margin-bottom: 0; 
+}
+.cardTitle { 
+  font-size: 18px; 
+  font-weight: 600; 
+  margin-top: 0; 
+  margin-bottom: 28px; /* Aumentato spazio sotto il titolo */
+}
+.cardTitleNoMargin { 
+  font-size: 18px; 
+  font-weight: 600; 
+  margin: 0; 
+}
+.cardDescription { 
+  color: var(--text-light); 
+  margin-top: -16px; 
+  margin-bottom: 24px; 
+  font-size: 14px; 
+  line-height: 1.5;
+}
+p { 
+  margin: 4px 0 0 0; 
+  color: var(--text-light); 
+  font-size: 14px; 
+}
+strong { 
+  color: var(--text-dark); 
+  font-size: 15px;
+}
+small { 
+  color: var(--text-light); 
+  font-size: 12px; 
+}
+
+/* --- Sezione Profilo --- */
+.profileLayout { display: flex; align-items: flex-start; }
+.avatarContainer { margin-right: 24px; text-align: center; }
+.avatarPlaceholder { width: 80px; height: 80px; border-radius: 50%; background-color: var(--border-color); margin-bottom: 8px; }
+.textButton { background: none; border: none; color: var(--primary-blue); font-weight: 500; cursor: pointer; padding: 0; font-size: 14px; }
+.textButton.danger { color: var(--error-red); }
+.formGrid { flex-grow: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.formGroup { display: flex; flex-direction: column; }
+.formGroupFull { grid-column: 1 / -1; }
+.formGroup label { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
+.formGroup input { padding: 10px 12px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 15px; }
+.cardFooter { margin-top: 24px; text-align: right; }
+.primaryButton { padding: 10px 20px; border: none; background-color: var(--primary-blue); color: white; border-radius: 8px; font-weight: 500; cursor: pointer; transition: background-color 0.2s; }
+.primaryButton:hover { background-color: #1d4ed8; }
+.secondaryButton { padding: 10px 20px; border: 1px solid var(--border-color); background-color: white; color: var(--text-dark); border-radius: 8px; font-weight: 500; cursor: pointer; transition: background-color 0.2s; }
+.secondaryButton:hover { background-color: var(--background-secondary); }
+.dangerButton {
+  background-color:  #dc2626;
+  color: white;
+  border: 1px solid var(--error-red);
+}
+
+.dangerButton:hover {
+  background-color: #9c1c1c; /* Un rosso leggermente più scuro per l'hover */
+}
+
+/* --- Stili per Righe Dettagliate (Security & Billing) --- */
+.detailRow { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 20px 0; 
+  border-bottom: 1px solid var(--border-color); 
+}
+.detailRow:last-child { 
+  border-bottom: none; 
+  padding-bottom: 0; 
+}
+.detailRow:first-child { 
+  padding-top: 0; 
+}
+
+/* --- Stili per Riga con Toggle (Security & Integrations) --- */
+.toggleRow { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+}
+.toggleRow p.cardDescription {
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+.toggleSwitch { position: relative; display: inline-block; width: 40px; height: 22px; }
+.toggleSwitch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 22px; }
+.slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 2px; bottom: 2px; background-color: white; transition: .4s; border-radius: 50%; }
+input:checked + .slider { background-color: var(--primary-blue); }
+input:checked + .slider:before { transform: translateX(18px); }
+
+/* --- Sezione Billing --- */
+/* --- Sezione Billing (SOSTITUISCI QUESTA INTERA SEZIONE) --- */
+.paymentMethod { display: flex; align-items: center; gap: 16px; }
+.cardIcon { font-size: 24px; }
+.paymentActions { margin-left: auto; display: flex; gap: 16px; }
+.addButton { width: 100%; text-align: center; padding: 12px; border: 1px dashed var(--border-color); background: none; border-radius: 8px; margin-top: 16px; font-weight: 500; cursor: pointer; }
+.sectionTitle { font-size: 20px; font-weight: 600; margin-bottom: 20px; }
+.plansGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+/* Stile delle card dei piani */
+.planCard { 
+  border: 1px solid var(--border-color); 
+  border-radius: 12px; 
+  padding: 24px;
+  display: flex;
+  flex-direction: column; /* Imposta la direzione a colonna */
+}
+.planCard h3 { margin-top: 0; font-size: 18px; }
+.planCard.popular { border-color: var(--primary-blue); border-width: 2px; position: relative; }
+.popularBadge { position: absolute; top: -12px; right: 20px; background-color: var(--primary-blue); color: white; padding: 4px 8px; border-radius: 12px; font-size: 12px; font-weight: 500; }
+.planPrice { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
+.planPrice small { font-size: 14px; font-weight: 500; color: var(--text-light); }
+
+/* Nuova lista delle feature */
+.featuresList { 
+  list-style: none; 
+  padding: 0; 
+  margin-top: 0;
+  margin-bottom: 24px;
+  flex-grow: 1; /* Fa sì che la lista occupi tutto lo spazio verticale disponibile */
+}
+.featuresList li { 
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 12px; 
+  font-size: 14px; 
+  font-weight: 500;
+}
+.featuresList li svg { 
+  margin-right: 10px; 
+  color: var(--success-green); 
+  flex-shrink: 0; /* Impedisce all'icona di restringersi */
+}
+
+/* Stili dei pulsanti nei piani */
+.planCard button {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  margin-top: auto; /* Spinge il pulsante in fondo alla card */
+}
+
+/* Nuovo stile per il pulsante scuro */
+.darkButton {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--text-dark);
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.darkButton:hover {
+  background-color: #374151; /* Un grigio più chiaro per l'hover */
+}
+
+/* --- Sezione Integrations --- */
+.integrationList { list-style: none; padding: 0; margin: 0; }
+.integrationRow { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--border-color); }
+.integrationRow:last-child { border-bottom: none; }
+.integrationInfo { display: flex; align-items: center; gap: 16px; }
+.integrationInfo svg { color: var(--text-light); }

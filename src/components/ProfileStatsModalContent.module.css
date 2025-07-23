@@ -1,0 +1,109 @@
+.container {
+  width: 500px;
+  padding: 16px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.profileHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #042f2e; /* Colore placeholder scuro */
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.university {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+.degree {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-blue);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.statItem {
+  padding: 16px;
+}
+
+.statValue {
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.statLabel {
+  display: block;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.progressSection {
+  margin-top: 16px;
+}
+
+.progressTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-dark);
+}
+
+.progressBarContainer {
+  width: 100%;
+  height: 8px;
+  background-color: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: var(--primary-blue);
+  border-radius: 4px;
+  transition: width 0.5s ease-in-out;
+}
+
+.progressLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-light);
+}

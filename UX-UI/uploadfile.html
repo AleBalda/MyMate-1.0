@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MyMate - Analisi Matematica I - Files</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8f9fa;
+    }
+    .main-container {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        height: 100vh;
+    }
+    .sidebar {
+        background-color: #ffffff;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #e5e7eb;
+    }
+    .main-content {
+        padding: 0 48px;
+        background-color: #f8f9fa;
+        overflow-y: auto;
+        position: relative;
+    }
+    .sidebar-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 16px;
+        border-radius: 8px;
+        font-weight: 500;
+        color: #4a5568;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    .sidebar-item.active {
+        background-color: #3b82f6;
+        color: white;
+    }
+    .sidebar-item:not(.active):hover {
+        background-color: #f3f4f6;
+    }
+    .sidebar-item .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 12px;
+    }
+    .user-profile {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        padding-top: 24px;
+        border-top: 1px solid #e5e7eb;
+    }
+    .file-card {
+        background-color: white;
+        border-radius: 12px;
+        padding: 16px;
+        border: 1px solid #e5e7eb;
+        transition: box-shadow 0.2s;
+    }
+    .file-card:hover {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+</head>
+<body>
+<div class="main-container">
+<aside class="sidebar">
+<h2 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Subjects</h2>
+<nav class="space-y-2">
+<a class="sidebar-item active" href="#">
+<span class="dot" style="background-color: #3b82f6;"></span>
+Analisi Matematica I
+</a>
+<a class="sidebar-item" href="#">
+<span class="dot" style="background-color: #ef4444;"></span>
+Diritto Privato
+</a>
+<a class="sidebar-item" href="#">
+<span class="dot" style="background-color: #10b981;"></span>
+Diritto Commerciale
+</a>
+<a class="sidebar-item" href="#">
+<span class="dot" style="background-color: #f97316;"></span>
+Statistica I
+</a>
+<a class="sidebar-item" href="#">
+<span class="dot" style="background-color: #6366f1;"></span>
+Fisica Generale
+</a>
+<a class="sidebar-item" href="#">
+<span class="dot" style="background-color: #f59e0b;"></span>
+Chimica Inorganica
+</a>
+<a class="sidebar-item" href="#">
+<span class="dot" style="background-color: #8b5cf6;"></span>
+Economia Politica
+</a>
+</nav>
+<div class="user-profile">
+<img alt="Mario Rossi's profile picture" class="w-10 h-10 rounded-full mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuGYd6dxAMJm04CBnaeJiELKkRceXiyrrmSO2SBnzFFkEkrCuxFrVy5ziYqohLf6S9574lljmZdMkvyBsOcnmKU6YEEaSGakzIjl_zWwrQJNPy6afHeEY1JmiLqtQ28wRWrboAWbJ-BxPYqVxwGWjmIDKKZaonOpNx0imGNa_5SuvxXtRHrn8GE0pV7pZbJysEsLH7jYOR4zcjXYK61cv4riPINzVcFy4mrs53yi-t4s4VSm49sM9-FczAbmaWb6nVEEDoR7J62g"/>
+<div class="flex-grow">
+<p class="font-semibold text-gray-800">Mario Rossi</p>
+</div>
+<span class="material-icons text-gray-500 cursor-pointer">settings</span>
+</div>
+</aside>
+<main class="main-content flex flex-col">
+<header class="flex items-center justify-between py-6 sticky top-0 bg-f8f9fa z-10">
+<h1 class="text-4xl font-bold text-gray-800">Analisi Matematica I</h1>
+<div class="flex items-center space-x-4">
+<div class="flex items-center space-x-2 bg-white px-4 py-2 rounded-lg border border-gray-200">
+<span class="material-icons text-gray-600">timer</span>
+<span class="font-medium text-gray-800">24:17</span>
+</div>
+<button class="bg-red-500 text-white p-3 rounded-full shadow-md hover:bg-red-600 transition">
+<span class="material-icons">mic</span>
+</button>
+</div>
+</header>
+<div class="flex-shrink-0 border-b border-gray-200">
+<nav aria-label="Tabs" class="-mb-px flex space-x-8">
+<a class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300" href="#">
+Chat
+</a>
+<a aria-current="page" class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm border-blue-500 text-blue-600" href="#">
+Files
+</a>
+<a class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300" href="#">
+Quiz
+</a>
+<a class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm text-gray-500 hover:text-gray-700 hover:border-gray-300" href="#">
+Recordings
+</a>
+</nav>
+</div>
+<div class="py-6 flex-grow">
+<div class="flex items-center justify-between mb-6">
+<div class="relative w-full max-w-lg">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Search files..." type="text"/>
+</div>
+<div class="flex items-center space-x-4">
+<button class="bg-blue-500 text-white font-semibold px-4 py-2.5 rounded-lg shadow-sm hover:bg-blue-600 transition flex items-center">
+<span class="material-icons mr-2">add</span>Upload File
+</button>
+<button class="bg-blue-100 text-blue-700 font-semibold px-4 py-2.5 rounded-lg hover:bg-blue-200 transition flex items-center">
+<span class="material-icons mr-2">add</span>New Note
+</button>
+</div>
+</div>
+<div class="flex justify-end items-center mb-6">
+<div class="flex items-center space-x-2 p-1 bg-gray-200 rounded-lg">
+<button class="p-1.5 bg-white rounded-md text-blue-600 shadow">
+<span class="material-icons">grid_view</span>
+</button>
+<button class="p-1.5 text-gray-500 hover:bg-gray-300 rounded-md">
+<span class="material-icons">view_list</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+<div class="file-card flex flex-col">
+<div class="relative flex-grow flex items-center justify-center bg-red-50 rounded-lg p-4">
+<img alt="PDF document icon" class="h-16 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfNZ2VH1chbh-mpGC00raolVSXsya57vJLoe5dWnjzbObqnsBlxQbXGqV5eP8IMO_oRpJ-IwVOgkwm44zB6ltazxwaM_S9X7wYHn9W3vhGIsVaYFUK1mmUSErdNwYIzAQXBsIL0hIIoRA3DXODp2njbo1w7hnI00Kp_wYVBzDRVdzoIQyX-gGugi_42BD8bPBdnF7O2w2n_BX4YEtTG6bdWZcxQAtFU2D3xLogHN_12qDLYuv5H8kn5wTHZjBJICJO5a7LcR-Omw"/>
+<button class="absolute top-2 right-2 text-gray-400 hover:text-gray-600">
+<span class="material-icons text-lg">more_vert</span>
+</button>
+</div>
+<p class="mt-3 text-sm font-medium text-gray-800 truncate">Appunti Lezione 5.pdf</p>
+</div>
+<div class="file-card flex flex-col">
+<div class="relative flex-grow flex items-center justify-center bg-blue-50 rounded-lg p-4">
+<img alt="Word document icon" class="h-16 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLctRGUnogHWD-QsNgfeHSlw4sGMmq5QQWLddNIY_wIZGBWp93maBdBCI1Mb9-Wo2-VrddRGIoN55qlmFgNlv-2T0plyUMSFRFlm1JxGR6npU1NaBEJhvwIqNnmfi-BhTf2wrQCdjqBKpElsuI6NyOoECiA-OsxB9lMQYAMU2CVn348poAF5zoXqW7vN0P7MpnYxslxHJc4V-OAfPg82ZHnbZFEoe9RoyTA8eE8mGiJgUMDV_9ULNeKOFRsBnsqNS31RFZLtQRaQ"/>
+<button class="absolute top-2 right-2 text-gray-400 hover:text-gray-600">
+<span class="material-icons text-lg">more_vert</span>
+</button>
+</div>
+<p class="mt-3 text-sm font-medium text-gray-800 truncate">Esercizi Derivate.docx</p>
+</div>
+<div class="file-card flex flex-col">
+<div class="relative flex-grow flex items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
+<img alt="A photo of a blackboard with math formulas" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFUsmdXdBIPmCqcL5LssCvMeFJCWk41cxNT1HEg3VfvOMRA0E84jtvelIIfFqpVnvBQ44jevjWArEC-f1j_TXOVymlPCNEv8NxB01doesHWCc4cdMSPRylwWGWQ9n6-T1ApkzYcZ7DaJ1MpV72vi4zD0H4c1lc5m7qE9H1ox5zBI5f9SzIam4je--yNMWlJUfPrOjX7_Ic90juN356N3cK2Z6OYtH1BZn2IUdUJynqHcivq9vnGbvvhViHR0p3rFf9_Gl_-O6UXQ"/>
+<button class="absolute top-2 right-2 text-white bg-black bg-opacity-20 rounded-full p-1 hover:bg-opacity-40">
+<span class="material-icons text-lg">more_vert</span>
+</button>
+</div>
+<p class="mt-3 text-sm font-medium text-gray-800 truncate">Lavagna Limiti.jpg</p>
+</div>
+<div class="file-card flex flex-col">
+<div class="relative flex-grow flex items-center justify-center bg-yellow-50 rounded-lg p-4">
+<img alt="MP3 audio file icon" class="h-16 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAGOKncXBC1EOckRQ0KFRr1mFtqNKIzUAL6ZbmtfLFjUy3_rnvpMJ1S7h3ZeEACs-9rtS-bHNKbUKUP7w5troWsszq_KkdfVF2VfGJUjUl-8MfRVJIwDUOKTyJkoOrDpgJX7gQ3rFOORQzEcNYGPIDgWEv4TFUpdnu71COTaoePQz3F7fpMMlVQ9UENjJ713meXNhudeGNzNPai1ukE2e-VBeah7rDHhQfAhcOIrRLtB9bweDGWSXAumRB6I_cf_w-P-ELiRPONw"/>
+<button class="absolute top-2 right-2 text-gray-400 hover:text-gray-600">
+<span class="material-icons text-lg">more_vert</span>
+</button>
+</div>
+<p class="mt-3 text-sm font-medium text-gray-800 truncate">Spiegazione Integrali.mp3</p>
+</div>
+<div class="file-card flex flex-col">
+<div class="relative flex-grow flex items-center justify-center bg-red-50 rounded-lg p-4">
+<img alt="PDF document icon" class="h-16 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA66q_hLvXim8kJERLIxZpzC7G0pJeQiE8qSMaUWTaF7wlcub48JUufzsckEzyoa6INKLd-DZwRgD-pwM2IctnkMSZcvPZA4WxN1H96pMv0H7OUmi72yDDtJJYIFZZzVANHEXsFiPbiODO2FYzEYt31QLhY7E7rd7DT-wqPfA5hoPplvSL_lo6OIvBw0j8JzAmyeITzeOuMZJERDoaZQOHi2r_tXgIW_nJ2Se-Bp5bcbw16PDx547B8cG5sS5vF1XkOYwhrlNt-UA"/>
+<button class="absolute top-2 right-2 text-gray-400 hover:text-gray-600">
+<span class="material-icons text-lg">more_vert</span>
+</button>
+</div>
+<p class="mt-3 text-sm font-medium text-gray-800 truncate">Teorema di Rolle.pdf</p>
+</div>
+<div class="file-card flex flex-col">
+<div class="relative flex-grow flex items-center justify-center bg-red-50 rounded-lg p-4">
+<img alt="PDF document icon" class="h-16 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3c4WuIP4D7PZnTMA0Pkc5Bz0OliwSy-cB9kwOU9n4Qtp9GSRNB6zL-jDYcobpOYbMc-1G_9S8CTyHa68XqF9NTzoOYqo4SCs_9oHYwl4PRf0o7_sA0vAkkR4FppxnEqTpKtUUP5rOL3t0gE89Nux2l9cQ7w7LFT1RNnzQyDqiAHhqXBUYAT7ERR6VYHh69btoznZILYA3z4z8YOh0bcij-0sFGQFgTcNGM6uSr94kQgn14gjnH-VSG34XNZS3fx0sXcHEAt9XHQ"/>
+<button class="absolute top-2 right-2 text-gray-400 hover:text-gray-600">
+<span class="material-icons text-lg">more_vert</span>
+</button>
+</div>
+<p class="mt-3 text-sm font-medium text-gray-800 truncate">Formulario completo.pdf</p>
+</div>
+<div class="file-card flex flex-col">
+<div class="relative flex-grow flex items-center justify-center bg-blue-50 rounded-lg p-4">
+<img alt="Word document icon" class="h-16 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHR-wV39CaeV4P5X_C0fqryTyvBT0M8I3uZP4wP65o5Ak_HwYyuTKGizmEu2LOK-_RhklW9wBfDl8o3hZnjH72lbDv0K535JXuV_nfANnVMENfTZ_0NxnEG16mmQYHSz2rWAk487tzfP1ZaKqPKgOa4JopoDXJWecMsMKEwhuWEz-oniIYCYWlhL9IPWKAUQN449andO74AkVvocptZ5wdZNaCTmxtc5_TbtaLf5YLnFauI1B2tMzOh87uPKkSDlg7tJ0vzQg1Pw"/>
+<button class="absolute top-2 right-2 text-gray-400 hover:text-gray-600">
+<span class="material-icons text-lg">more_vert</span>
+</button>
+</div>
+<p class="mt-3 text-sm font-medium text-gray-800 truncate">Appunti Personali.docx</p>
+</div>
+</div>
+</div>
+<div class="overlay p-8">
+<div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl flex flex-col h-[90vh]">
+<div class="p-6 border-b border-gray-200 flex items-center justify-between">
+<h2 class="text-2xl font-bold text-gray-800">New Note</h2>
+<button class="text-gray-400 hover:text-gray-600">
+<span class="material-icons">close</span>
+</button>
+</div>
+<div class="p-6 flex-grow flex flex-col">
+<input class="w-full text-xl font-semibold placeholder-gray-400 border-0 focus:ring-0 mb-4" placeholder="Note Title..." type="text" value="Integrals and Derivatives"/>
+<div class="flex-grow border border-gray-200 rounded-lg p-4">
+<div class="border-b border-gray-200 pb-2 mb-4 flex space-x-4">
+<button class="p-2 rounded hover:bg-gray-100"><span class="material-icons text-gray-600">format_bold</span></button>
+<button class="p-2 rounded hover:bg-gray-100"><span class="material-icons text-gray-600">format_italic</span></button>
+<button class="p-2 rounded hover:bg-gray-100"><span class="material-icons text-gray-600">format_underlined</span></button>
+<button class="p-2 rounded hover:bg-gray-100"><span class="material-icons text-gray-600">format_list_bulleted</span></button>
+<button class="p-2 rounded hover:bg-gray-100"><span class="material-icons text-gray-600">format_list_numbered</span></button>
+<button class="p-2 rounded hover:bg-gray-100"><span class="material-icons text-gray-600">link</span></button>
+<button class="p-2 rounded hover:bg-gray-100"><span class="material-icons text-gray-600">image</span></button>
+</div>
+<textarea class="w-full h-full resize-none border-0 focus:ring-0 text-gray-700" placeholder="Start writing your note...">An integral is a mathematical object that can be interpreted as an area or a generalization of area. Integrals, together with derivatives, are the fundamental objects of calculus. Other words for integral include antiderivative and primitive. The process of finding an integral is called integration.
+</textarea>
+</div>
+</div>
+<div class="p-6 bg-gray-50 rounded-b-2xl flex justify-end space-x-4">
+<button class="px-6 py-2.5 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300">Cancel</button>
+<button class="px-6 py-2.5 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 shadow-sm">Save Note</button>
+</div>
+</div>
+</div>
+<div class="overlay hidden p-8">
+<div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl flex flex-col relative">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+<span class="material-icons">close</span>
+</button>
+<div class="p-8 border-b border-gray-200">
+<h2 class="text-2xl font-bold text-gray-800">Upload a File</h2>
+<p class="text-gray-500 mt-1">Select a file from your device to upload to Analisi Matematica I</p>
+</div>
+<div class="p-8 flex-grow">
+<div class="flex items-center justify-center w-full">
+<label class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100" for="dropzone-file">
+<div class="flex flex-col items-center justify-center pt-5 pb-6">
+<span class="material-icons text-5xl text-gray-400 mb-3">cloud_upload</span>
+<p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+<p class="text-xs text-gray-500">SVG, PNG, JPG, GIF, PDF, DOCX, etc.</p>
+</div>
+<input class="hidden" id="dropzone-file" type="file"/>
+</label>
+</div>
+<div class="mt-6">
+<div class="flex items-center bg-gray-100 p-4 rounded-lg">
+<img alt="PDF document icon" class="h-10 w-auto mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfNZ2VH1chbh-mpGC00raolVSXsya57vJLoe5dWnjzbObqnsBlxQbXGqV5eP8IMO_oRpJ-IwVOgkwm44zB6ltazxwaM_S9X7wYHn9W3vhGIsVaYFUK1mmUSErdNwYIzAQXBsIL0hIIoRA3DXODp2njbo1w7hnI00Kp_wYVBzDRVdzoIQyX-gGugi_42BD8bPBdnF7O2w2n_BX4YEtTG6bdWZcxQAtFU2D3xLogHN_12qDLYuv5H8kn5wTHZjBJICJO5a7LcR-Omw"/>
+<div class="flex-grow">
+<p class="text-sm font-medium text-gray-800">Esercitazione_integrali.pdf</p>
+<p class="text-xs text-gray-500">3.4 MB</p>
+</div>
+<div class="w-32 mx-4">
+<div class="w-full bg-gray-200 rounded-full h-1.5">
+<div class="bg-blue-600 h-1.5 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<span class="text-sm font-medium text-green-600">Done</span>
+<button class="ml-4 text-gray-500 hover:text-gray-700">
+<span class="material-icons text-xl">cancel</span>
+</button>
+</div>
+</div>
+</div>
+<div class="p-8 bg-gray-50 rounded-b-2xl flex justify-end space-x-4">
+<button class="px-6 py-2.5 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300">Cancel</button>
+<button class="px-6 py-2.5 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 shadow-sm">Upload</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

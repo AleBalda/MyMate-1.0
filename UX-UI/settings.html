@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MyMate Settings</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .settings-active {
+            background-color: #eef2ff;
+            color: #4f46e5;
+            font-weight: 600;
+        }
+        .popular-tag {
+            background-color: #eef2ff;
+            color: #4f46e5;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+<div class="flex flex-col h-screen">
+<header class="p-6">
+<a class="flex items-center text-gray-600 hover:text-gray-900 transition-colors" href="#">
+<span class="material-icons">arrow_back</span>
+<span class="ml-2 font-medium">Back to Dashboard</span>
+</a>
+</header>
+<main class="flex-grow flex p-6 pt-0">
+<div class="w-full max-w-7xl mx-auto grid grid-cols-12 gap-8">
+<aside class="col-span-3">
+<nav class="flex flex-col space-y-2">
+<a class="flex items-center px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100" href="#">
+                            Profile
+                        </a>
+<a class="flex items-center px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100" href="#">
+                            Account &amp; Security
+                        </a>
+<a class="flex items-center px-4 py-2 rounded-lg settings-active" href="#">
+                            Plan &amp; Billing
+                        </a>
+<a class="flex items-center px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100" href="#">
+                            Notifications
+                        </a>
+<a class="flex items-center px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100" href="#">
+                            Integrations
+                        </a>
+<a class="flex items-center px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100" href="#">
+                           Export Data
+                        </a>
+</nav>
+</aside>
+<div class="col-span-9">
+<div class="space-y-8">
+<div class="bg-white p-6 rounded-xl border border-gray-200">
+<h2 class="text-lg font-semibold text-gray-800 mb-4">Your Current Plan</h2>
+<div class="flex justify-between items-center">
+<div>
+<p class="text-xl font-bold text-gray-900">MyMate Pro</p>
+<p class="text-gray-500">€12.99 / month</p>
+<p class="text-sm text-gray-400 mt-1">Next billing date: Oct 23, 2025</p>
+</div>
+<button class="bg-gray-100 text-gray-700 font-medium py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors">Manage Subscription</button>
+</div>
+</div>
+<div class="bg-white p-6 rounded-xl border border-gray-200">
+<h2 class="text-lg font-semibold text-gray-800 mb-4">Payment Methods</h2>
+<div class="space-y-4">
+<div class="flex justify-between items-center p-4 border border-gray-200 rounded-lg">
+<div class="flex items-center">
+<img alt="Visa card icon" class="w-8 h-8 mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlE4uleNF8p8o167d46RwumN-WP51vl5LgFDweitU4k_KRr7elnOjHWOpsqnEBk1v7deBDZLE9O3MOZfgrSsJQ_BIjOsdsEW11FkgHOED7IUF5uJKJipfP2SxrvLLHxRyEnow5ZGAGZ6RRey9YxMhqCZghqkn1ry4iVuW6-0SIadnH2lpqToZ08h-WssBTlLN70TtJXck-e2xmxgW0KUL5fsGS0Mh1EZFOzxhDns-GpEpcebpcoGL73iWWsq7RMrB27q1bzXio0FA"/>
+<div>
+<p class="font-medium">Visa ending in 4242</p>
+<p class="text-sm text-gray-500">Expires 12/2028</p>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-sm font-medium text-indigo-600 hover:text-indigo-800">Edit</button>
+<button class="text-sm font-medium text-red-600 hover:text-red-800">Remove</button>
+</div>
+</div>
+<button class="w-full flex justify-center items-center py-3 px-4 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 hover:border-gray-400 transition-colors">
+<span class="material-icons mr-2">add</span>
+                                    Add New Payment Method
+                                </button>
+</div>
+</div>
+<div>
+<h2 class="text-lg font-semibold text-gray-800 mb-4">Available Plans</h2>
+<div class="grid grid-cols-3 gap-6">
+<div class="bg-white p-6 rounded-xl border border-gray-200 flex flex-col">
+<h3 class="text-lg font-semibold">Free</h3>
+<p class="text-2xl font-bold mt-2">€0<span class="text-base font-normal text-gray-500">/month</span></p>
+<ul class="mt-4 space-y-2 text-gray-600 text-sm flex-grow">
+<li class="flex items-center"><span class="material-icons text-green-500 mr-2">check_circle</span>Limited AI chat</li>
+<li class="flex items-center"><span class="material-icons text-green-500 mr-2">check_circle</span>Basic quiz generation</li>
+<li class="flex items-center"><span class="material-icons text-green-500 mr-2">check_circle</span>1GB file storage</li>
+</ul>
+<button class="mt-6 w-full bg-gray-100 text-gray-700 font-medium py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors">Current Plan</button>
+</div>
+<div class="bg-white p-6 rounded-xl border-2 border-indigo-600 relative flex flex-col">
+<span class="popular-tag absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 px-3 py-1 text-sm font-semibold rounded-full">Popular</span>
+<h3 class="text-lg font-semibold text-indigo-600">Pro</h3>
+<p class="text-2xl font-bold mt-2">€12.99<span class="text-base font-normal text-gray-500">/month</span></p>
+<ul class="mt-4 space-y-2 text-gray-600 text-sm flex-grow">
+<li class="flex items-center"><span class="material-icons text-green-500 mr-2">check_circle</span>Unlimited AI chat &amp; voice</li>
+<li class="flex items-center"><span class="material-icons text-green-500 mr-2">check_circle</span>Advanced quiz system</li>
+<li class="flex items-center"><span class="material-icons text-green-500 mr-2">check_circle</span>100GB file storage</li>
+<li class="flex items-center"><span class="material-icons text-green-500 mr-2">check_circle</span>Full gamification access</li>
+</ul>
+<button class="mt-6 w-full bg-indigo-600 text-white font-medium py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">Your Current Plan</button>
+</div>
+<div class="bg-white p-6 rounded-xl border border-gray-200 flex flex-col">
+<h3 class="text-lg font-semibold">Ultimate</h3>
+<p class="text-2xl font-bold mt-2">€19.99<span class="text-base font-normal text-gray-500">/month</span></p>
+<ul class="mt-4 space-y-2 text-gray-600 text-sm flex-grow">
+<li class="flex items-center"><span class="material-icons text-green-500 mr-2">check_circle</span>Everything in Pro</li>
+<li class="flex items-center"><span class="material-icons text-green-500 mr-2">check_circle</span>Priority AI access</li>
+<li class="flex items-center"><span class="material-icons text-green-500 mr-2">check_circle</span>Unlimited storage</li>
+<li class="flex items-center"><span class="material-icons text-green-500 mr-2">check_circle</span>Avatar customization</li>
+</ul>
+<button class="mt-6 w-full bg-gray-900 text-white font-medium py-2 px-4 rounded-lg hover:bg-black transition-colors">Upgrade Plan</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

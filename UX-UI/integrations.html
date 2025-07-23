@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MyMate Settings - Integrations</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .settings-active {
+            background-color: #eef2ff;
+            color: #4f46e5;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+<div class="flex flex-col h-screen">
+<header class="p-6">
+<a class="flex items-center text-gray-600 hover:text-gray-900 transition-colors" href="#">
+<span class="material-icons">arrow_back</span>
+<span class="ml-2 font-medium">Back to Dashboard</span>
+</a>
+</header>
+<main class="flex-grow flex p-6 pt-0">
+<div class="w-full max-w-7xl mx-auto grid grid-cols-12 gap-8">
+<aside class="col-span-3">
+<nav class="flex flex-col space-y-2">
+<a class="flex items-center px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100" href="#">
+                        Profile
+                    </a>
+<a class="flex items-center px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100" href="#">
+                        Account &amp; Security
+                    </a>
+<a class="flex items-center px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100" href="#">
+                        Plan &amp; Billing
+                    </a>
+<a class="flex items-center px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100" href="#">
+                        Notifications
+                    </a>
+<a class="flex items-center px-4 py-2 rounded-lg settings-active" href="#">
+                        Integrations
+                    </a>
+<a class="flex items-center px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-100" href="#">
+                       Export Data
+                    </a>
+</nav>
+</aside>
+<div class="col-span-9">
+<div class="bg-white p-8 rounded-xl border border-gray-200">
+<h1 class="text-2xl font-bold text-gray-800 mb-2">Integrations</h1>
+<p class="text-gray-500 mb-8">Connect MyMate with your favorite apps to streamline your workflow.</p>
+<div class="space-y-6">
+<div class="flex items-center justify-between p-4 border rounded-lg">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-lg">
+<svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"> <path d="M15.59 3.59a2 2 0 0 1 2.83 2.83l-1.42 1.42a2 2 0 0 1-2.83-2.83l1.42-1.42zM12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"></path> <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"></path> <path d="M8.41 20.41a2 2 0 0 1-2.83-2.83l1.42-1.42a2 2 0 0 1 2.83 2.83l-1.42 1.42z"></path></svg>
+</div>
+<div>
+<p class="font-medium text-gray-800">Productivity Platform</p>
+<p class="text-sm text-gray-500 mt-1">Integrate with your platform to import your notes.</p>
+</div>
+</div>
+<button class="bg-indigo-600 text-white px-4 py-2 rounded-md font-medium text-sm hover:bg-indigo-700 transition-colors">Connect</button>
+</div>
+<div class="flex items-center justify-between p-4 border rounded-lg">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-lg">
+<svg class="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 3H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V5C19 3.89543 18.1046 3 17 3Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M12 18H12.01" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<p class="font-medium text-gray-800">Calendar</p>
+<p class="text-sm text-gray-500 mt-1">Connect your calendar to sync your academic schedule.</p>
+</div>
+</div>
+<button aria-checked="true" class="bg-indigo-600 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2" role="switch" type="button">
+<span class="sr-only">Enable calendar integration</span>
+<span aria-hidden="true" class="translate-x-5 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</div>
+<div class="flex items-center justify-between p-4 border rounded-lg">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-lg">
+<svg class="w-6 h-6 text-gray-500" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 7V4H20V7L12 15L4 7Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M4 17H11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M4 12H13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<p class="font-medium text-gray-800">Email Client</p>
+<p class="text-sm text-gray-500 mt-1">Connect your email to get important notifications directly.</p>
+</div>
+</div>
+<button class="bg-gray-200 text-gray-600 px-4 py-2 rounded-md font-medium text-sm hover:bg-gray-300 transition-colors">Connect</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
