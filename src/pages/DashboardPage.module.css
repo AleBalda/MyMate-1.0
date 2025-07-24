@@ -251,3 +251,15 @@
 .goalItem.completed svg {
   color: var(--success-green);
 }
+
+.widgetLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.widgetLink:hover .widgetCard {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}

@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import styles from './DashboardPage.module.css';
-import { FiMic, FiPaperclip, FiAlertCircle, FiGift, FiCheckCircle, FiCircle, FiCalendar } from 'react-icons/fi';
+// --- MODIFICATO: Aggiunta FiFlame e rimosse le icone non usate qui ---
+import { FiMic, FiPaperclip, FiAlertCircle, FiGift, FiCheckCircle, FiCircle, FiAward} from 'react-icons/fi'; 
 import avatarImg from '../assets/aavatar.png';
 
-// --- PERCORSI ---
+// --- AGGIUNTO: Import del componente Link per la navigazione ---
+import { Link } from 'react-router-dom';
+
 import Modal from '../components/ui/Modal'; 
 import StreakModalContent from '../components/Dashboard/StreakModalContent';
 import GemsModalContent from '../components/Dashboard/GemsModalContent';
@@ -52,26 +55,30 @@ const DashboardPage = () => {
         </main>
 
         <aside className={styles.rightColumn}>
-          <div className={styles.widgetCard}>
-            <h3>Academic Calendar</h3>
-            {calendarEvents.map((event, index) => (
-              <div key={index} className={styles.calendarEvent}>
-                <div className={styles.calendarDate}>
-                  <div>{event.day}</div>
-                  <div>{event.month}</div>
+          {/* --- MODIFICATO: L'intero widget ora è avvolto da un Link --- */}
+          <Link to="/calendar" className={styles.widgetLink}>
+            <div className={styles.widgetCard}>
+              <h3>Academic Calendar</h3>
+              {calendarEvents.map((event, index) => (
+                <div key={index} className={styles.calendarEvent}>
+                  <div className={styles.calendarDate}>
+                    <div>{event.day}</div>
+                    <div>{event.month}</div>
+                  </div>
+                  <div className={styles.calendarLine} />
+                  <div className={styles.calendarDetails}>
+                    <strong>{event.title}</strong>
+                    <span>{event.details}</span>
+                  </div>
                 </div>
-                <div className={styles.calendarLine} />
-                <div className={styles.calendarDetails}>
-                  <strong>{event.title}</strong>
-                  <span>{event.details}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </Link>
+          
           <div className={styles.widgetCard}>
             <h3>Your Progress</h3>
             <div className={styles.progressItem} onClick={() => setIsStreakModalOpen(true)} style={{cursor: 'pointer'}}>
-              <FiCalendar />
+              <FiAward /> {/* Corretto da FiCalendar a FiFlame per coerenza */}
               <span>Daily Streak</span>
               <span className={styles.value}>5 Days</span>
             </div>
@@ -96,9 +103,11 @@ const DashboardPage = () => {
       <Modal isOpen={isStreakModalOpen} onClose={() => setIsStreakModalOpen(false)}>
         <StreakModalContent />
       </Modal>
+
       <Modal isOpen={isGemsModalOpen} onClose={() => setIsGemsModalOpen(false)}>
         <GemsModalContent />
       </Modal>
+
       <Modal isOpen={isProfileModalOpen} onClose={() => setIsProfileModalOpen(false)}>
         <ProfileStatsModalContent />
       </Modal>

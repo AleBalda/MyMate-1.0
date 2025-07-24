@@ -20,7 +20,7 @@ const SettingsProfile = () => {
               <label>Last Name</label>
               <input type="text" defaultValue="Doe" />
             </div>
-            <div className={styles.formGroupFull}>
+            <div className={`${styles.formGroup} ${styles.formGroupFull}`}>
               <label>Username</label>
               <input type="text" defaultValue="alexdoe" />
             </div>

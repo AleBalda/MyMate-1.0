@@ -3,8 +3,7 @@ import { useParams } from 'react-router-dom';
 import styles from './SubjectEnvironmentPage.module.css';
 import SideNav from '../components/Layout/SideNav';
 import { FiMic, FiPaperclip, FiMinimize2, FiMaximize2 } from 'react-icons/fi';
-
-// Importiamo SOLO i componenti che servono in QUESTA pagina
+import avatarImg from '../assets/aavatar.png';
 import PomodoroWidget from '../components/Subject/PomodoroWidget';
 import SubjectFiles from '../components/Subject/SubjectFiles';
 import SubjectQuiz from '../components/Subject/SubjectQuiz';
@@ -14,7 +13,7 @@ import SubjectRecordings from '../components/Subject/SubjectRecordings';
 const SubjectChat = ({ subjectName }: { subjectName: string }) => (
     <div className={styles.chatView}>
       <div className={styles.avatarPanel}>
-        <img src="https://i.pravatar.cc/300?u=ai-subject" alt="AI Avatar" />
+        <img src={avatarImg} alt="AI Avatar" />
         <div className={styles.avatarControls}>
           <button><FiMinimize2 /></button>
           <button><FiMaximize2 /></button>

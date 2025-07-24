@@ -48,9 +48,22 @@ small {
 .avatarPlaceholder { width: 80px; height: 80px; border-radius: 50%; background-color: var(--border-color); margin-bottom: 8px; }
 .textButton { background: none; border: none; color: var(--primary-blue); font-weight: 500; cursor: pointer; padding: 0; font-size: 14px; }
 .textButton.danger { color: var(--error-red); }
-.formGrid { flex-grow: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.formGroup { display: flex; flex-direction: column; }
-.formGroupFull { grid-column: 1 / -1; }
+.formGrid {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* La nostra griglia a due colonne */
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+/* QUESTA È LA REGOLA FONDAMENTALE */
+.formGroupFull {
+  grid-column: 1 / -1; /* Dice all'elemento: "parti dalla colonna 1 e finisci all'ultima (-1)" */
+}
 .formGroup label { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
 .formGroup input { padding: 10px 12px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 15px; }
 .cardFooter { margin-top: 24px; text-align: right; }
