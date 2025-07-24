@@ -1,0 +1,17 @@
+.container { padding: 32px; max-width: 800px; margin: 0 auto; flex-grow: 1; overflow-y: auto; }
+.container h2 { font-size: 24px; margin-top: 0; margin-bottom: 24px; }
+.card { background-color: white; border: 1px solid var(--border-color); border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+.settingRow { margin-bottom: 24px; }
+.settingRow:last-child { margin-bottom: 0; }
+.settingRow label { display: block; font-weight: 500; margin-bottom: 12px; }
+.slider { width: 100%; cursor: pointer; }
+.tagInput { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; border: 1px solid var(--border-color); border-radius: 8px; padding: 8px; }
+.tag { display: inline-flex; align-items: center; background-color: var(--primary-blue-light); color: var(--primary-blue); padding: 4px 8px; border-radius: 6px; font-weight: 500; }
+.tag button { background: none; border: none; margin-left: 4px; cursor: pointer; color: var(--primary-blue); }
+.tagInput input { border: none; outline: none; flex-grow: 1; min-width: 150px; }
+.buttonGroup { display: flex; gap: 12px; }
+.buttonGroup button { padding: 8px 16px; border: 1px solid var(--border-color); background: none; border-radius: 8px; font-weight: 500; cursor: pointer; }
+.buttonGroup button.active { border-color: var(--primary-blue); background-color: var(--primary-blue-light); color: var(--primary-blue); }
+.dropzone { text-align: center; border: 2px dashed var(--border-color); border-radius: 12px; padding: 32px; display: flex; flex-direction: column; align-items: center; gap: 12px; color: var(--text-light); }
+.secondaryButton { background: none; border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 8px; font-weight: 500; cursor: pointer; }
+.startButton { width: 100%; padding: 16px; font-size: 16px; font-weight: 600; color: white; background-color: var(--primary-blue); border: none; border-radius: 8px; cursor: pointer; }

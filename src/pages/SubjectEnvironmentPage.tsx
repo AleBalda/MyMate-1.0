@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './SubjectEnvironmentPage.module.css';
 import SideNav from '../components/Layout/SideNav';
-import { FiMic, FiPaperclip,  FiMinimize2, FiMaximize2 } from 'react-icons/fi';
+import { FiMic, FiPaperclip, FiMinimize2, FiMaximize2 } from 'react-icons/fi';
 
-// Importa i nuovi componenti per i contenuti delle tab
+// Importiamo SOLO i componenti che servono in QUESTA pagina
 import PomodoroWidget from '../components/Subject/PomodoroWidget';
 import SubjectFiles from '../components/Subject/SubjectFiles';
+import SubjectQuiz from '../components/Subject/SubjectQuiz';
+import SubjectRecordings from '../components/Subject/SubjectRecordings';
 
-// Definiamo un componente placeholder per la vista Chat, come era prima
+// Componente placeholder per la vista Chat
 const SubjectChat = ({ subjectName }: { subjectName: string }) => (
     <div className={styles.chatView}>
       <div className={styles.avatarPanel}>
@@ -32,7 +34,7 @@ const SubjectChat = ({ subjectName }: { subjectName: string }) => (
     </div>
 );
 
-// Dati di esempio (devono corrispondere a quelli in SideNav per il lookup)
+// Dati di esempio per trovare il nome della materia
 const subjects = [
   { id: 'analisi-matematica-1', name: 'Analisi Matematica I' },
   { id: 'diritto-privato', name: 'Diritto Privato' },
@@ -43,31 +45,26 @@ const subjects = [
   { id: 'economia-politica', name: 'Economia Politica' },
 ];
 
-// Definiamo un tipo per le tab, per maggiore sicurezza del codice
+// Tipo per le tab
 type ActiveTab = 'chat' | 'files' | 'quiz' | 'recordings';
 
 const SubjectEnvironmentPage = () => {
-  // Ottiene il parametro :subjectId dall'URL
   const { subjectId } = useParams<{ subjectId: string }>();
-  // Stato per tenere traccia di quale tab è attualmente attiva
-  const [activeTab, setActiveTab] = useState<ActiveTab>('chat'); // Mostra "Chat" di default
+  // --- SINTASSI CORRETTA QUI ---
+  const [activeTab, setActiveTab] = useState<ActiveTab>('chat');
 
-  // Trova i dettagli della materia corrente usando l'ID dall'URL
   const currentSubject = subjects.find(s => s.id === subjectId) || { name: 'Subject Not Found' };
 
-  // Funzione che decide quale componente renderizzare in base alla tab attiva
   const renderContent = () => {
     switch(activeTab) {
       case 'chat':
         return <SubjectChat subjectName={currentSubject.name} />;
       case 'files':
         return <SubjectFiles />;
-      // Aggiungeremo i casi per 'quiz' e 'recordings' in futuro
-      // Per ora, mostrano un semplice testo come placeholder
       case 'quiz':
-        return <div style={{padding: '32px'}}>La sezione Quiz è in arrivo!</div>;
-      case 'recordings':
-        return <div style={{padding: '32px'}}>La sezione Recordings è in arrivo!</div>;
+        return <SubjectQuiz />;
+       case 'recordings':
+        return <SubjectRecordings />; // <-- MODIFICATO
       default:
         return <SubjectChat subjectName={currentSubject.name} />;
     }
@@ -92,7 +89,6 @@ const SubjectEnvironmentPage = () => {
           <button onClick={() => setActiveTab('recordings')} className={`${styles.tab} ${activeTab === 'recordings' ? styles.active : ''}`}>Recordings</button>
         </nav>
 
-        {/* Qui viene renderizzato il contenuto della tab attiva */}
         {renderContent()}
       </div>
     </div>

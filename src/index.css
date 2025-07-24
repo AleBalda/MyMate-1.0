@@ -1,19 +1,14 @@
-/* src/index.css */
-
-/* --- AGGIUNGI QUESTE RIGHE --- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-/* ----------------------------- */
 
-/* Il resto del file rimane uguale... */
 html, body {
-  height: 100%; /* Aggiungiamo anche questo per sicurezza */
+  height: 100%; 
 }
 
-/* Reset di base e font globali */
+
 body {
   margin: 0;
   padding: 0;
@@ -25,7 +20,7 @@ body {
   background-color: #f9fafb;
 }
 
-/* Definiamo le nostre variabili di colore per coerenza */
+
 :root {
   --primary-blue: #2563eb;
   --primary-blue-light: #dbeafe;
