@@ -1,0 +1,17 @@
+{
+    "users": {
+        "testuser": {
+            "gems": 110,
+            "streak": 2,
+            "last_login_date": "2025-07-31",
+            "daily_goals": [
+                {
+                    "id": "button_test",
+                    "text": "Clicca il bottone per completare!",
+                    "completed": true
+                }
+            ],
+            "goals_last_updated": "2025-07-31"
+        }
+    }
+}

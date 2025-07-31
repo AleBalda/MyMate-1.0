@@ -1,0 +1,131 @@
+/* Rimosso .container, ora il layout è gestito da SubjectEnvironmentPage.module.css */
+
+/* --- Stili per il Pannello Destro: Risultati --- */
+.resultsPanel {
+  display: flex; /* Mantiene la centratura interna */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centra verticalmente il contenuto */
+  text-align: center;
+  padding: 32px;
+}
+.resultsPanel h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.subtitle {
+  font-size: 16px;
+  color: var(--text-light);
+  margin-bottom: 32px;
+}
+.summaryText {
+  font-size: 16px;
+  color: var(--text-light);
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+.summaryText strong {
+  color: var(--text-dark);
+}
+
+.scoreCircle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border-width: 12px;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.scoreCircle strong {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.scoreCircle span {
+  font-size: 14px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Colori dinamici per il cerchio */
+.scoreGood { border-color: var(--success-green); }
+.scoreMedium { border-color: #f59e0b; }
+.scoreBad { border-color: var(--error-red); }
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.primaryButton, .secondaryButton {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+}
+.primaryButton {
+  background-color: var(--primary-blue);
+  color: white;
+}
+.secondaryButton {
+  border: 1px solid var(--border-color);
+  background-color: white;
+  color: var(--text-dark);
+}
+
+/* --- Stili per il Pannello Sinistro: Avatar --- */
+.avatarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  object-fit: cover;
+}
+.feedbackBubble {
+  background-color: var(--background-main); /* Cambiato per contrastare con lo sfondo del pannello */
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px 24px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-dark);
+  position: relative;
+  max-width: 80%;
+}
+.feedbackBubble::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent var(--background-main) transparent;
+}
+/* Aggiungiamo un bordo alla freccetta per abbinare la bolla */
+.feedbackBubble::after {
+  content: '';
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent var(--border-color) transparent;
+  z-index: -1;
+}

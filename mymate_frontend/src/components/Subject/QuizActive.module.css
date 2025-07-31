@@ -1,0 +1,111 @@
+/* --- MODIFICATO: Usiamo Flexbox per gestire lo spazio verticale --- */
+.container { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; /* Centra tutto orizzontalmente */
+  justify-content: center; /* Centra il blocco principale verticalmente */
+  height: 100%; 
+  padding: 32px;
+  box-sizing: border-box; 
+  overflow-y: auto; 
+}
+
+/* --- MODIFICATO: Spostiamo l'header in cima e il footer in fondo --- */
+.header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%; 
+  max-width: 900px;
+  margin-bottom: auto; /* Spinge il resto del contenuto verso il centro */
+  padding-bottom: 24px;
+}
+.progressBar { 
+  flex-grow: 1; 
+  height: 8px; 
+  background-color: var(--border-color); 
+  border-radius: 4px; 
+  margin: 0 24px; 
+  overflow: hidden; 
+}
+.progressBar div { 
+  height: 100%; 
+  background-color: var(--primary-blue); 
+  border-radius: 4px; 
+  transition: width 0.3s ease-in-out; 
+}
+.exitButton { 
+  background: none; 
+  border: 1px solid var(--border-color); 
+  padding: 8px 16px; 
+  border-radius: 8px; 
+  font-weight: 500; 
+  cursor: pointer; 
+}
+
+/* --- MODIFICATO: Ingrandiamo il testo e le risposte --- */
+.questionText { 
+  font-size: 36px; /* Aumentato per più impatto */
+  font-weight: 600;
+  text-align: center; 
+  margin-bottom: 48px; /* Più spazio sotto la domanda */
+  color: var(--text-dark); 
+  max-width: 800px; 
+}
+
+.optionsGrid { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 24px; /* Aumentato lo spazio tra le opzioni */
+  width: 100%; 
+  max-width: 900px;
+}
+.optionCard { 
+  padding: 32px; /* Più padding per rendere i pulsanti più grandi */
+  border: 2px solid var(--border-color); /* Bordo leggermente più spesso */
+  border-radius: 16px; /* Angoli più arrotondati */
+  text-align: center; 
+  font-size: 18px; /* Testo più grande */
+  font-weight: 500; 
+  cursor: pointer; 
+  background-color: white; 
+  transition: all 0.2s; 
+}
+.optionCard:hover { 
+  border-color: var(--primary-blue); 
+  transform: translateY(-4px); 
+  box-shadow: var(--shadow-md); 
+}
+
+.footer { 
+  width: 100%; 
+  text-align: center;
+  margin-top: auto; /* Spinge il pulsante in fondo */
+  padding-top: 48px;
+}
+
+.nextButton { 
+  padding: 16px 64px; /* Pulsante più largo */
+  font-size: 18px; 
+  font-weight: 600; 
+  color: white; 
+  background-color: var(--primary-blue); 
+  border: none; 
+  border-radius: 12px; 
+  cursor: pointer; 
+}
+
+/* --- Stili di feedback aggiornati --- */
+.optionCard.correct {
+  background-color: #d1fae5;
+  border-color: var(--success-green);
+  color: #065f46;
+}
+.optionCard.incorrect {
+  background-color: #fee2e2;
+  border-color: var(--error-red);
+  color: #991b1b;
+}
+.optionCard:disabled {
+  cursor: not-allowed;
+}

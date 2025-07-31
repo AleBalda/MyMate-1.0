@@ -1,0 +1,103 @@
+.studioContainer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background-color: var(--background-main);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  color: var(--text-light);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.closeButton:hover {
+  background-color: var(--background-secondary);
+}
+
+.micWrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var(--background-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+/* Animazione "pulse" quando si sta registrando */
+.micWrapper[data-state='recording'] {
+  background-color: #fee2e2; /* Rosso chiaro */
+  color: var(--error-red);
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 1);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+.timerDisplay {
+  font-size: 48px;
+  font-weight: 300;
+  font-family: 'monospace';
+  color: var(--text-dark);
+  margin-bottom: 32px;
+  min-height: 58px; /* Altezza fissa per evitare salti di layout */
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 50px; /* Altezza fissa per evitare salti di layout */
+}
+
+.primaryAction, .secondaryAction {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.primaryAction {
+  background-color: var(--primary-blue);
+  color: white;
+}
+.primaryAction:hover {
+  background-color: #1d4ed8;
+}
+
+.secondaryAction {
+  background-color: var(--background-secondary);
+  color: var(--text-dark);
+}
+.secondaryAction:hover {
+  background-color: var(--border-color);
+}
