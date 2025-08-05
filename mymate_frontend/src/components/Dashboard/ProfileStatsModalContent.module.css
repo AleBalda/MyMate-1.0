@@ -21,7 +21,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #042f2e; /* Colore placeholder scuro */
+  background-color: #042f2e; 
   margin-right: 20px;
   flex-shrink: 0;
 }

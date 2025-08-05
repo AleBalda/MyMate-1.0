@@ -60,7 +60,7 @@
   flex-grow: 1;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-auto-rows: minmax(0, 1fr); /* Permette alle righe di essere flessibili */
+  grid-auto-rows: minmax(0, 1fr); 
 }
 
 .dayCell {

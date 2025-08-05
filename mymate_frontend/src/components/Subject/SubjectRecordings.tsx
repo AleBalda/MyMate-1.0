@@ -7,7 +7,7 @@ import {
 } from 'react-icons/fi';
 
 import DropdownMenu from '../ui/DropdownMenu';
-import RecordingStudio from './RecordingStudio'; // Importa la nuova vista studio
+import RecordingStudio from './RecordingStudio'; 
 
 // Definiamo un tipo per le registrazioni
 interface RecordingItem {

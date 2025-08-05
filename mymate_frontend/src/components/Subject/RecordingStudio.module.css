@@ -63,14 +63,14 @@
   font-family: 'monospace';
   color: var(--text-dark);
   margin-bottom: 32px;
-  min-height: 58px; /* Altezza fissa per evitare salti di layout */
+  min-height: 58px; 
 }
 
 .controls {
   display: flex;
   align-items: center;
   gap: 16px;
-  min-height: 50px; /* Altezza fissa per evitare salti di layout */
+  min-height: 50px; 
 }
 
 .primaryAction, .secondaryAction {

@@ -26,7 +26,7 @@
 /* Contenitore Grid per le due card affiancate */
 .configGrid {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* La card delle opzioni è più grande */
+  grid-template-columns: 2fr 1fr; 
   gap: 2%;
   margin-bottom: 24px;
   height: 80%;
@@ -50,7 +50,7 @@
 .buttonGroup button { padding: 8px 16px; border: 1px solid var(--border-color); background: none; border-radius: 8px; font-weight: 500; cursor: pointer; }
 .buttonGroup button.active { border-color: var(--primary-blue); background-color: var(--primary-blue-light); color: var(--primary-blue); }
 
-/* Stile specifico per la card di upload per allinearla verticalmente */
+
 .card:last-child{
     padding: 0;
 }
@@ -88,7 +88,7 @@
   border: none; 
   border-radius: 8px; 
   cursor: pointer;
-  margin-top: auto; /* Spinge il pulsante in fondo se c'è spazio */
+  margin-top: auto; 
   flex-shrink: 0;
 }
 

@@ -32,7 +32,7 @@ const SettingsBilling = () => {
         <button className={styles.addButton}>+ Add New Payment Method</button>
       </div>
 
-      {/* --- SEZIONE MODIFICATA E COMPLETATA --- */}
+      {/* */}
       <div>
         <h2 className={styles.sectionTitle}>Available Plans</h2>
         <div className={styles.plansGrid}>

@@ -3,7 +3,7 @@
 /* Stile del contenitore principale della pagina */
 .pageWrapper {
   background-color: var(--background-secondary);
-  /* Rimuoviamo l'altezza fissa e l'overflow per permettere alla pagina di scrollare */
+
   min-height: 100vh; 
   padding: 48px 64px; 
 }
@@ -22,22 +22,22 @@
 
 /* Griglia di layout principale */
 .settingsGrid {
-  display: grid; /* Torniamo a Grid */
+  display: grid; 
   grid-template-columns: 240px 1fr;
   gap: 48px;
-  align-items: flex-start; /* Fondamentale per il corretto funzionamento di sticky */
+  align-items: flex-start; 
 }
 
-/* LA MAGIA È QUI: Navigazione a sinistra che rimane fissa */
+
 .settingsNav {
-  position: sticky; /* Rimane "incollato" */
-  top: 48px;       /* alla distanza di 48px dal bordo superiore durante lo scorrimento */
+  position: sticky; 
+  top: 48px;       
   
   display: flex;
   flex-direction: column;
 }
 
-/* Stili dei pulsanti (invariati) */
+
 .settingsNav button {
   display: flex;
   align-items: center;
@@ -58,7 +58,7 @@
 .settingsNav button.active svg { color: var(--primary-blue); }
 
 
-/* Contenuto a destra: non ha bisogno di stili particolari di layout */
+
 .settingsContent {
   /* Nessuna regola di overflow o altezza qui */
 }

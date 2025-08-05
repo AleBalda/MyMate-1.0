@@ -7,7 +7,7 @@ import { usePomodoro } from '../../context/PomodoroContext';
 
 const PomodoroWidget = () => {
   const { 
-    durations, // <-- 1. PRENDIAMO LE DURATE REALI
+    durations, 
     isTimerActive, 
     phase, 
     secondsLeft, 

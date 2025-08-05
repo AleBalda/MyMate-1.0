@@ -36,7 +36,7 @@
   border: 1px solid var(--border-color);
   border-radius: 8px;
   font-size: 15px;
-  box-sizing: border-box; /* Assicura che il padding non rompa il layout */
+  box-sizing: border-box; 
 }
 
 .formGrid {
@@ -78,7 +78,7 @@
   border-radius: 8px;
 }
 .disclaimer input[type="checkbox"] {
-  margin-top: 4px; /* Allinea la checkbox con la prima riga di testo */
+  margin-top: 4px; 
   flex-shrink: 0;
 }
 .disclaimer label {

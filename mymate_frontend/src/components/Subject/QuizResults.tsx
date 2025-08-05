@@ -8,7 +8,7 @@ import avatarImg from '../../assets/aavatar.png';
 interface QuizResultsProps {
   result: QuizResult;
   onRestart: () => void;
-  onReview: () => void; // Aggiunta la nuova prop per la revisione
+  onReview: () => void; 
 }
 
 const QuizResults: React.FC<QuizResultsProps> = ({ result, onRestart, onReview }) => {
@@ -58,7 +58,7 @@ const QuizResults: React.FC<QuizResultsProps> = ({ result, onRestart, onReview }
         </p>
 
         <div className={resultStyles.actions}>
-          {/* Il pulsante "Review Answers" ora chiama la funzione onReview */}
+          {/* Il pulsante "Review Answers" chiama la funzione onReview */}
           <button className={resultStyles.secondaryButton} onClick={onReview}>
             Review Answers
           </button>

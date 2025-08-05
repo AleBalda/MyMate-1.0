@@ -1,11 +1,9 @@
-/* Rimosso .container, ora il layout è gestito da SubjectEnvironmentPage.module.css */
 
-/* --- Stili per il Pannello Destro: Risultati --- */
 .resultsPanel {
-  display: flex; /* Mantiene la centratura interna */
+  display: flex; 
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Centra verticalmente il contenuto */
+  justify-content: center;
   text-align: center;
   padding: 32px;
 }
@@ -81,7 +79,7 @@
   color: var(--text-dark);
 }
 
-/* --- Stili per il Pannello Sinistro: Avatar --- */
+
 .avatarContainer {
   display: flex;
   flex-direction: column;
@@ -96,7 +94,7 @@
   object-fit: cover;
 }
 .feedbackBubble {
-  background-color: var(--background-main); /* Cambiato per contrastare con lo sfondo del pannello */
+  background-color: var(--background-main); 
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 16px 24px;
@@ -117,7 +115,7 @@
   border-style: solid;
   border-color: transparent transparent var(--background-main) transparent;
 }
-/* Aggiungiamo un bordo alla freccetta per abbinare la bolla */
+
 .feedbackBubble::after {
   content: '';
   position: absolute;

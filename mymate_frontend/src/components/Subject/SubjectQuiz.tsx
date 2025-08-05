@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import QuizSetup from './QuizSetup';
 import QuizActive from './QuizActive';
 import QuizResults from './QuizResults';
-import QuizReview from './QuizReview'; // Importa il nuovo componente di revisione
+import QuizReview from './QuizReview'; 
 
 // Definiamo i tipi (le "forme" dei nostri dati) e li esportiamo
 // così altri componenti possono usarli.

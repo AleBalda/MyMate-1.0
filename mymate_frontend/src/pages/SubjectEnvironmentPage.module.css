@@ -72,7 +72,7 @@
 .headerActions {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Allinea le azioni a destra */
+  justify-content: flex-end; 
   gap: 12px;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .recordButton.recordingActive {
-  background-color: #b91c1c; /* Darker red */
+  background-color: #b91c1c; 
   animation: pulse 1.5s infinite;
 }
 

@@ -39,7 +39,7 @@ const SettingsProfile = () => {
         </div>
       </div>
 
-      {/* --- SEZIONE MODIFICATA E COMPLETATA --- */}
+      {/* */}
       <div className={styles.card}>
         <h2 className={styles.cardTitle}>Account Details</h2>
         <div className={styles.detailRow}>
@@ -47,7 +47,7 @@ const SettingsProfile = () => {
             <strong>Email Address</strong>
             <p>alex.doe@university.com</p>
           </div>
-          {/* Questo elemento non ha un pulsante a destra, quindi è completo */}
+          {/*  */}
         </div>
         <div className={styles.detailRow}>
            <div>
@@ -56,7 +56,7 @@ const SettingsProfile = () => {
           </div>
           <button className={styles.secondaryButton}>Change Password</button>
         </div>
-        {/* --- PARTE AGGIUNTA --- */}
+        {/* ---  --- */}
         <div className={styles.detailRow}>
            <div>
             <strong>Delete Account</strong>

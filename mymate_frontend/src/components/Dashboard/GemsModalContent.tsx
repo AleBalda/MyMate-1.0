@@ -1,16 +1,15 @@
-// Il tuo file GemsModalContent.tsx CORRETTO
 
 import React from 'react';
 import styles from './GemsModalContent.module.css';
 import { FiGift, FiArrowUpCircle, FiArrowDownCircle, FiCpu, FiClock, FiFeather, FiAward } from 'react-icons/fi';
-import { useGems } from '../../hooks/useGems'; // Il percorso corretto
+import { useGems } from '../../hooks/useGems'; 
 
 const GemsModalContent = () => {
-  // ---- MODIFICA 1: Usiamo il nome della nuova funzione generica ----
+
   const { gems, triggerGamificationEvent, isLoading } = useGems();
 
   const handleUnlockClick = () => {
-    // ---- MODIFICA 2: Chiamiamo l'evento specifico definito nel backend ----
+
     triggerGamificationEvent('TEST_ADD_GEMS'); 
   };
 

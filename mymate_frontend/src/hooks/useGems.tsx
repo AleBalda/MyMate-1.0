@@ -36,7 +36,7 @@ export function useGems(): UseGemsReturn {
     fetchInitialGems();
   }, []);
 
-  // La nuova funzione generica che il frontend userà
+ 
   const triggerGamificationEvent = async (eventType: string): Promise<void> => {
     console.log(`Tentativo di triggerare l'evento: ${eventType}`);
     try {

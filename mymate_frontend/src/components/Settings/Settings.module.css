@@ -1,11 +1,9 @@
-/* src/components/Settings/Settings.module.css */
-
 /* --- Card Principale e Titoli --- */
 .card {
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  padding: 24px 28px; /* Aumentato padding laterale */
-  margin-bottom: 32px; /* Aumentato spazio tra le card */
+  padding: 24px 28px; 
+  margin-bottom: 32px; 
 }
 .card:last-child { 
   margin-bottom: 0; 
@@ -14,7 +12,7 @@
   font-size: 18px; 
   font-weight: 600; 
   margin-top: 0; 
-  margin-bottom: 28px; /* Aumentato spazio sotto il titolo */
+  margin-bottom: 28px; 
 }
 .cardTitleNoMargin { 
   font-size: 18px; 
@@ -51,7 +49,7 @@ small {
 .formGrid {
   flex-grow: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* La nostra griglia a due colonne */
+  grid-template-columns: 1fr 1fr; 
   gap: 20px;
 }
 
@@ -60,9 +58,8 @@ small {
   flex-direction: column;
 }
 
-/* QUESTA È LA REGOLA FONDAMENTALE */
 .formGroupFull {
-  grid-column: 1 / -1; /* Dice all'elemento: "parti dalla colonna 1 e finisci all'ultima (-1)" */
+  grid-column: 1 / -1; 
 }
 .formGroup label { font-size: 14px; font-weight: 500; margin-bottom: 6px; }
 .formGroup input { padding: 10px 12px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 15px; }
@@ -78,10 +75,9 @@ small {
 }
 
 .dangerButton:hover {
-  background-color: #9c1c1c; /* Un rosso leggermente più scuro per l'hover */
-}
+  background-color: #9c1c1c; }
 
-/* --- Stili per Righe Dettagliate (Security & Billing) --- */
+
 .detailRow { 
   display: flex; 
   justify-content: space-between; 
@@ -115,7 +111,7 @@ input:checked + .slider { background-color: var(--primary-blue); }
 input:checked + .slider:before { transform: translateX(18px); }
 
 /* --- Sezione Billing --- */
-/* --- Sezione Billing (SOSTITUISCI QUESTA INTERA SEZIONE) --- */
+
 .paymentMethod { display: flex; align-items: center; gap: 16px; }
 .cardIcon { font-size: 24px; }
 .paymentActions { margin-left: auto; display: flex; gap: 16px; }
@@ -129,21 +125,20 @@ input:checked + .slider:before { transform: translateX(18px); }
   border-radius: 12px; 
   padding: 24px;
   display: flex;
-  flex-direction: column; /* Imposta la direzione a colonna */
-}
+  flex-direction: column;}
 .planCard h3 { margin-top: 0; font-size: 18px; }
 .planCard.popular { border-color: var(--primary-blue); border-width: 2px; position: relative; }
 .popularBadge { position: absolute; top: -12px; right: 20px; background-color: var(--primary-blue); color: white; padding: 4px 8px; border-radius: 12px; font-size: 12px; font-weight: 500; }
 .planPrice { font-size: 32px; font-weight: 700; margin-bottom: 24px; }
 .planPrice small { font-size: 14px; font-weight: 500; color: var(--text-light); }
 
-/* Nuova lista delle feature */
+
 .featuresList { 
   list-style: none; 
   padding: 0; 
   margin-top: 0;
   margin-bottom: 24px;
-  flex-grow: 1; /* Fa sì che la lista occupi tutto lo spazio verticale disponibile */
+  flex-grow: 1; 
 }
 .featuresList li { 
   display: flex; 
@@ -155,7 +150,7 @@ input:checked + .slider:before { transform: translateX(18px); }
 .featuresList li svg { 
   margin-right: 10px; 
   color: var(--success-green); 
-  flex-shrink: 0; /* Impedisce all'icona di restringersi */
+  flex-shrink: 0; 
 }
 
 /* Stili dei pulsanti nei piani */
@@ -163,10 +158,10 @@ input:checked + .slider:before { transform: translateX(18px); }
   width: 100%;
   padding: 12px;
   font-size: 15px;
-  margin-top: auto; /* Spinge il pulsante in fondo alla card */
+  margin-top: auto; 
 }
 
-/* Nuovo stile per il pulsante scuro */
+
 .darkButton {
   padding: 10px 20px;
   border: none;
@@ -178,7 +173,7 @@ input:checked + .slider:before { transform: translateX(18px); }
   transition: background-color 0.2s;
 }
 .darkButton:hover {
-  background-color: #374151; /* Un grigio più chiaro per l'hover */
+  background-color: #374151; 
 }
 
 /* --- Sezione Integrations --- */

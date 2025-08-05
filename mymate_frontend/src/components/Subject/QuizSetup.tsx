@@ -40,7 +40,7 @@ const QuizSetup: React.FC<QuizSetupProps> = ({ onStartQuiz }) => {
       <div className={styles.configPanel}>
         <h2>Prepare Your Quiz</h2>
         
-        {/* Nuovo contenitore Grid per le due card affiancate */}
+        {/* ontenitore Grid per le due card affiancate */}
         <div className={styles.configGrid}>
           
           {/* CARD #1: Opzioni del Quiz */}

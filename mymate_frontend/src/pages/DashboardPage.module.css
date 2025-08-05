@@ -16,7 +16,7 @@
   background-color: var(--background-main);
   border-right: 1px solid var(--border-color);
   padding: 24px;
-  overflow-y: auto; /* Abilita lo scorrimento solo per questa colonna */
+  overflow-y: auto; 
 }
 
 .logo {
@@ -39,7 +39,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-grow: 1; /* Occupa lo spazio rimanente */
+  flex-grow: 1; 
 }
 
 .subjectItem {

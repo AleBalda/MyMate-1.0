@@ -11,13 +11,12 @@ import GemsModalContent from '../components/Dashboard/GemsModalContent';
 import ProfileStatsModalContent from '../components/Dashboard/ProfileStatsModalContent';
 import SideNav from '../components/Layout/SideNav';
 import { LiaGemSolid } from "react-icons/lia";
-// --- AGGIUNTA 1: Importiamo il nuovo componente per la modale ---
+
 import AddNewSubjectModal from '../components/Layout/AddNewSubjectModal';
 
-// ---- MODIFICA 1: Importiamo l'hook per i dati utente ----
-import { useUser } from '../hooks/useUser'; // Assicurati che il percorso sia corretto
 
-// Manteniamo la lista statica del calendario
+import { useUser } from '../hooks/useUser'; 
+
 const calendarEvents = [
   { day: '31', month: 'MAY', title: 'Exam: Analisi I', details: 'Aula 1, Building A' },
   { day: '1', month: 'JUN', title: 'Submit: Essay', details: 'Diritto Privato' },
@@ -25,21 +24,21 @@ const calendarEvents = [
 ];
 
 const DashboardPage = () => {
-  // Manteniamo la gestione dello stato delle modali
+  
   const [isStreakModalOpen, setIsStreakModalOpen] = useState(false);
   const [isGemsModalOpen, setIsGemsModalOpen] = useState(false);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
-  // --- AGGIUNTA 2: Aggiungiamo lo stato per la nuova modale ---
+  
   const [isAddSubjectModalOpen, setIsAddSubjectModalOpen] = useState(false);
 
-  // ---- MODIFICA 3: Usiamo l'hook per ottenere i dati dinamici ----
+ 
   const { user, isLoading } = useUser();
 
   const handleProfileClick = () => {
     setIsProfileModalOpen(true);
   };
 
-  // --- AGGIUNTA 3: Creiamo la funzione per aprire la nuova modale ---
+  
   const handleAddNewSubjectClick = () => {
     setIsAddSubjectModalOpen(true);
   };
@@ -47,14 +46,14 @@ const DashboardPage = () => {
   return (
     <>
       <div className={styles.dashboardGrid}>
-        {/* Passiamo entrambe le funzioni come prop a SideNav */}
+        {/* */}
         <SideNav 
           onProfileClick={handleProfileClick} 
           onAddNewSubjectClick={handleAddNewSubjectClick} 
         />
 
         <main className={styles.centerColumn}>
-          {/* Questa sezione rimane invariata */}
+          {/* */}
           <img src={avatarImg} alt="AI Avatar" className={styles.avatar} />
           <h1 className={styles.welcomeMessage}>Ciao Mario, pronto a spaccare oggi?</h1>
           <div className={styles.commandBar}>
@@ -75,7 +74,7 @@ const DashboardPage = () => {
         </main>
 
         <aside className={styles.rightColumn}>
-          {/* Il widget del calendario rimane invariato */}
+          {/* */}
           <Link to="/calendar" className={styles.widgetLink}>
             <div className={styles.widgetCard}>
               <h3>Academic Calendar</h3>
@@ -95,7 +94,7 @@ const DashboardPage = () => {
             </div>
           </Link>
           
-          {/* Il widget del progresso ora usa i dati dinamici dall'hook */}
+          {/* */}
           <div className={styles.widgetCard}>
             <h3>Your Progress</h3>
             <div className={styles.progressItem} onClick={() => setIsStreakModalOpen(true)} style={{cursor: 'pointer'}}>
@@ -110,13 +109,13 @@ const DashboardPage = () => {
             </div>
           </div>
 
-          {/* ---- MODIFICA 4: Il widget degli obiettivi ora è completamente dinamico ---- */}
+          {/* */}
           <div className={styles.widgetCard}>
             <h3>Today's Goals</h3>
             {isLoading ? (
               <p>Caricamento...</p>
             ) : (
-              // Usiamo i dati 'daily_goals' che arrivano dall'hook 'user'
+             
               user?.daily_goals.map((goal) => (
                 <div key={goal.id} className={`${styles.goalItem} ${goal.completed ? styles.completed : ''}`}>
                   {goal.completed ? <FiCheckCircle /> : <FiCircle />}
@@ -128,7 +127,7 @@ const DashboardPage = () => {
         </aside>
       </div>
 
-      {/* Le modali esistenti rimangono invariate */}
+      {/* */}
       <Modal isOpen={isStreakModalOpen} onClose={() => setIsStreakModalOpen(false)}>
         <StreakModalContent />
       </Modal>
@@ -141,7 +140,7 @@ const DashboardPage = () => {
         <ProfileStatsModalContent />
       </Modal>
 
-      {/* --- AGGIUNTA 4: Renderizziamo la nuova modale --- */}
+      {/*  */}
       <Modal isOpen={isAddSubjectModalOpen} onClose={() => setIsAddSubjectModalOpen(false)}>
         <AddNewSubjectModal />
       </Modal>

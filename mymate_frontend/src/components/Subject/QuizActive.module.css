@@ -80,12 +80,12 @@
 .footer { 
   width: 100%; 
   text-align: center;
-  margin-top: auto; /* Spinge il pulsante in fondo */
+  margin-top: auto; 
   padding-top: 48px;
 }
 
 .nextButton { 
-  padding: 16px 64px; /* Pulsante più largo */
+  padding: 16px 64px; 
   font-size: 18px; 
   font-weight: 600; 
   color: white; 

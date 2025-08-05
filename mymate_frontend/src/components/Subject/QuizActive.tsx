@@ -3,7 +3,7 @@ import styles from './QuizActive.module.css';
 import type { QuizConfig, QuizResult } from './SubjectQuiz';
 
 // ---- MODIFICA 1: Importiamo l'hook per la logica utente ----
-import { useUser } from '../../hooks/useUser'; // Assicurati che questo percorso sia corretto per la tua struttura
+import { useUser } from '../../hooks/useUser'; 
 
 // --- Tipi e Dati di Esempio (invariati) ---
 interface Question {
@@ -35,17 +35,17 @@ const QuizActive: React.FC<QuizActiveProps> = ({ config, onFinish }) => {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
 
-  // ---- MODIFICA 2: Attiviamo l'hook per ottenere la funzione di gamification ----
+ 
   const { triggerGamificationEvent } = useUser();
 
 
-  // --- Logica per preparare le domande (invariata) ---
+
   useEffect(() => {
     const shuffled = [...allQuestions].sort(() => 0.5 - Math.random());
     setQuestions(shuffled.slice(0, config.numQuestions));
   }, [config]);
 
-  // --- Logica per gestire la selezione di una risposta (invariata) ---
+
   const handleAnswerSelect = (selectedIndex: number) => {
     if (isAnswered) return;
 
@@ -57,7 +57,7 @@ const QuizActive: React.FC<QuizActiveProps> = ({ config, onFinish }) => {
     }
   };
 
-  // --- Logica per passare alla domanda successiva o finire il quiz (MODIFICATA) ---
+ 
   const handleNext = () => {
     // Controlliamo se siamo all'ultima domanda
     if (currentQuestionIndex < questions.length - 1) {
@@ -66,7 +66,7 @@ const QuizActive: React.FC<QuizActiveProps> = ({ config, onFinish }) => {
       setIsAnswered(false);
       setSelectedAnswer(null);
     } else {
-      // ---- MODIFICA 3: QUI SCATTA L'EVENTO DI GAMIFICATION! ----
+      
       // Se siamo all'ultima domanda, prima notifichiamo il backend...
       console.log('Quiz terminato. Triggero evento.');
       triggerGamificationEvent('COMPLETE_QUIZ');

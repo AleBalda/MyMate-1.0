@@ -1,11 +1,8 @@
-// Tuo file StreakModalContent.tsx modificato
-
 import React from 'react';
 import styles from './StreakModalContent.module.css';
 import { FiGift, FiCheckCircle, FiCircle } from 'react-icons/fi';
 import { FaFireAlt } from "react-icons/fa";
-import { useUser } from '../../hooks/useUser'; // <-- NOVITÀ: Importa il nuovo hook
-
+import { useUser } from '../../hooks/useUser'; 
 const goals = [
   { text: 'Log in to MyMate', completed: true },
   { text: 'Complete one study session', completed: true },
@@ -13,7 +10,7 @@ const goals = [
 ];
 
 const StreakModalContent = () => {
-  // --- NOVITÀ: Usiamo l'hook per ottenere tutti i dati dell'utente ---
+
   const { user, isLoading } = useUser();
 
   return (
@@ -21,7 +18,7 @@ const StreakModalContent = () => {
       <h2 className={styles.title}>Your Progress & Goals</h2>
       <div className={styles.hero}>
         <FaFireAlt className={styles.flameIcon} />
-        {/* --- NOVITÀ: Usiamo il valore dello streak che arriva dal backend --- */}
+        {/* Usiamo il valore dello streak che arriva dal backend --- */}
         <span className={styles.streakNumber}>
           {isLoading ? '...' : user?.streak}
         </span>

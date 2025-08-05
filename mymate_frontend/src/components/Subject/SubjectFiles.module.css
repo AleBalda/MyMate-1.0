@@ -32,7 +32,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-left: auto; /* Spinge i controlli a destra della search bar */
+  margin-left: auto; 
 }
 .sortControls select {
   padding: 10px 12px;

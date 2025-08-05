@@ -18,10 +18,10 @@ const subjects = [
   { id: 'economia-politica', name: 'Economia Politica', color: '#3b82f6' },
 ];
 
-// Definiamo le props che il componente si aspetta di ricevere
+
 interface SideNavProps {
   onProfileClick: () => void;
-  onAddNewSubjectClick: () => void; // Aggiunta la nuova prop
+  onAddNewSubjectClick: () => void; 
 }
 
 const SideNav: React.FC<SideNavProps> = ({ onProfileClick, onAddNewSubjectClick }) => {
@@ -53,7 +53,7 @@ const SideNav: React.FC<SideNavProps> = ({ onProfileClick, onAddNewSubjectClick 
         ))}
       </ul>
       
-      {/* Il pulsante ora chiama la funzione passata come prop */}
+      {/*  */}
       <button className={styles.addNewButton} onClick={onAddNewSubjectClick}>
         <FiPlusCircle />
         <span>Add New Subject</span>

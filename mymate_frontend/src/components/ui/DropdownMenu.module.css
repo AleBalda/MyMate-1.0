@@ -1,6 +1,6 @@
 .dropdownMenu {
   position: absolute;
-  top: 40px; /* Distanza dal pulsante dei 3 puntini */
+  top: 40px; 
   right: 16px;
   background-color: white;
   border-radius: 8px;
