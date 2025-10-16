@@ -5,19 +5,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from datetime import date, timedelta
 import json
+from contextlib import asynccontextmanager
 import os
 
-app = FastAPI()
 
-# --- Configurazione CORS ---
-origins = ["http://localhost:5173"]
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 # --- Dati di Partenza per il Test ---
 # Ad ogni riavvio del server, i dati ripartiranno da questo stato per facilitare i test.
@@ -38,7 +29,6 @@ INITIAL_DB_STATE = {
 # Usiamo una copia dello stato iniziale per non modificare l'originale
 db_data = INITIAL_DB_STATE.copy()
 
-
 # --- Centralina Eventi ---
 GAMIFICATION_EVENTS = {
     'TEST_ADD_GEMS': 10,
@@ -50,12 +40,27 @@ class GamificationEventRequest(BaseModel):
     eventType: str
 
 
-@app.on_event("startup")
-async def startup_event():
+@asynccontextmanager
+async def lifespan(app: FastAPI):
     """Questa funzione si esegue all'avvio del server e resetta i dati."""
     global db_data
     db_data = INITIAL_DB_STATE.copy()
     print("Server avviato, dati di test resettati.")
+    yield
+    print("Server in chiusura.")
+
+
+app = FastAPI(lifespan=lifespan)
+
+# --- Configurazione CORS ---
+origins = ["http://localhost:5173"]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/api/user/{user_id}")
 def get_user_data(user_id: str):
@@ -115,3 +120,8 @@ def trigger_gamification_event(user_id: str, request: GamificationEventRequest):
 
     if not goal_found:
         raise HTTPException(status_code=400, detail="Obiettivo non trovato o già completato.")
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
